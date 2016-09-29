@@ -30,6 +30,15 @@ $(document).ready(function(){
 					$(".sad-details").html(obj[0].sad_cnt);
 					$(".angry-details").html(obj[0].angry_cnt);		
 				}
+				else
+				{
+					$(".love-details").html(0);
+					$(".like-details").html(0);
+					$(".haha-details").html(0);
+					$(".wow-details").html(0);
+					$(".sad-details").html(0);
+					$(".angry-details").html(0);		
+				}
 			  
 			} 
 		});
