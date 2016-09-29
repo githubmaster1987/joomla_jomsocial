@@ -1,0 +1,53 @@
+.joms-module__body .joms-module--hellome {
+    margin: -14px;
+}
+
+.joms-module--hellome .joms-hcard {
+    width: 100%;
+    border: 0;
+}
+
+.joms-list--hellome li span {
+    display: table-cell;
+    width: 40px;
+    text-align: right;
+}
+
+.joms-module--hellome .joms-list--hellome li {
+    padding: 8px 14px;
+    border-bottom:1px solid rgba(0,0,0,0.04);
+    display: table;
+    width: 100%;
+}
+
+.joms-module--hellome .joms-list--hellome li:last-child {
+    border-bottom: 0;
+}
+
+.joms-action--hellome {
+    display:table;
+    width:100%;
+    table-layout: fixed;
+    border-spacing:1px;
+}
+
+.joms-action--hellome > div {
+    display:table-cell;
+}
+
+.joms-button--hellome {
+    display:block;
+    background: rgba(0,0,0,0.04);
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.joms-button--hellome:hover {
+    background: rgba(0,0,0,0.02);
+    text-decoration: none;
+}
+
+.joms-button--hellome.logout {
+    background: #e74c3c;
+}

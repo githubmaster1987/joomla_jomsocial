@@ -1,0 +1,212 @@
+//  uncategorized because it's very specific
+
+.joms-video__duration {
+    position: absolute;
+    font-size: $font-size-small;
+    line-height: $font-size-small;
+    padding: 2px;
+    top:0;
+    right:0;
+    background: black;
+    color: white;
+    .joms-module &,
+    .joms-plugin__body & {
+        bottom: 2px;
+        right: 2px;
+        top: auto;
+    }
+    .app-widget-content & {
+        bottom: 1px;
+        right: 2px;
+        top: auto;
+    }
+    @include media('medium') {
+        top: auto;
+        bottom: 0;
+        font-size: $font-size-smallest;
+    }
+}
+
+.joms-activity-filter {
+    margin:0px;
+    margin-bottom: ms();
+    display:block;
+    width:100%;
+    position:relative;
+    padding:ms(-2);
+    border: 1px solid rgba(0,0,0,0.06);
+    background:$scss-color-postbox-tab;
+
+
+    .joms-activity-filter-status {
+        color:color-contrast($scss-color-postbox-tab);
+        font-weight:bold;
+        text-transform: lowercase;
+    }
+
+    .joms-activity-filter-action {
+        font-size:$font-size-small;
+        a {
+            cursor:pointer;
+            color: color-contrast($scss-color-postbox-tab);
+            text-decoration:none;
+            &:hover, &.filtered {
+                color: color-contrast($scss-color-postbox-tab);
+            }
+        }
+    }
+
+    .joms-activity-filter-dropdown {
+        text-align:left;
+        border-color:$scss-color-postbox-tab;
+        li {
+            width:50%;
+            float:left;
+            &:last-child {
+                width:100%;
+                margin-top:ms(-1);
+                padding-top:ms(-1);
+            }
+            &.active {
+                background: darken($scss-color-postbox-tab,4%);
+            }
+        }
+    }
+
+}
+
+#fb-root {
+    margin-top: ms(-1);
+}
+
+.joms-quote {
+    padding: ms();
+    @if ($scss-direction==rtl) {
+        border-right: 3px solid $scss-color-border;
+    } @else {
+        border-left: 3px solid $scss-color-border;
+    }
+}
+
+// Active class for module filters
+.active-state {
+    color: black;
+    &:hover,
+    &:focus {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.joms-bookmarks {
+    li {
+        width: 50%;
+        float: left;
+        margin-bottom: 10px;
+        @include media('medium') {
+            width: 33%;
+        }
+    }
+}
+
+.joms-fetched-images img {
+    width: 100%;
+}
+
+// Progress bar on registration page
+.outerpgbar, .innerpgbar {
+    background: $scss-color-stream-background;
+    height: ms();
+    width: 100%;
+    margin-bottom: ms();
+}
+
+.innerpgbar {
+    background: $scss-color-primary;
+}
+
+// JS Event Calendar Module
+.joms-calendar--day,
+.joms-event__body {
+    background: rgba(0,0,0,0.04);
+    color: color-contrast($scss-color-module-background);
+}
+
+.joms-calendar--today {
+    background: rgba(0,0,0,0.1)
+}
+
+.joms-calendar__grid-title,
+.joms-calendar--week-day,
+.joms-calendar__event {
+    background: $scss-color-primary;
+    color: color-contrast($scss-color-primary);
+}
+
+.joms-calendar__event:hover,
+.joms-calendar__event-over  {
+    background: lighten($scss-color-primary,4%);
+    color: color-contrast($scss-color-primary);
+}
+
+// JS Profile Completeness Module
+svg stop.cl1 {
+    stop-color: $scss-color-primary;
+}
+svg stop.cl2 {
+    stop-color: lighten($scss-color-primary,5%);
+}
+svg stop.cl3 {
+    stop-color: lighten($scss-color-primary,5%);
+}
+svg stop.cl4 {
+    stop-color: lighten($scss-color-primary,10%);
+}
+svg stop.cl5 {
+    stop-color: lighten($scss-color-primary,10%);
+}
+svg stop.cl6 {
+    stop-color: lighten($scss-color-primary,15%);
+}
+svg stop.cl7 {
+    stop-color: lighten($scss-color-primary,15%);
+}
+svg stop.cl8 {
+    stop-color: lighten($scss-color-primary,10%);
+}
+svg stop.cl9 {
+    stop-color: lighten($scss-color-primary,10%);
+}
+svg stop.cl10 {
+    stop-color: lighten($scss-color-primary,5%);
+}
+svg stop.cl11 {
+    stop-color: lighten($scss-color-primary,5%);
+}
+svg stop.cl12 {
+    stop-color: $scss-color-primary;
+}
+
+
+// Blank Slate
+
+.joms-blankslate {
+    padding: ms();
+    background: $scss-color-neutral;
+    color: $scss-color-neutral-contrast;
+    display: block;
+    text-align: center;
+}
+
+// joms title bar
+.joms-titlebar {
+    background: $scss-color-neutral;
+    color: $scss-color-neutral-contrast;
+    display: block;
+    padding: ms(-2) ms(-1);
+    margin-top: ms(1);
+    font-size: $font-size-small;
+    &:first-child {
+        margin-top: 0;
+    }
+}

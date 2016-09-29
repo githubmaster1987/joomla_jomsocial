@@ -1,0 +1,58 @@
+.joms-module {
+    *, *:before, *:after {
+        /* apply a natural box layout model to all elements */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    img {
+        /*width: 100%; This causes a lot of issues @Matthew */
+    }
+
+    .joms-stream__meta p {
+        word-break: break-word;
+        -webkit-hyphens: auto;
+           -moz-hyphens: auto;
+                hyphens: auto;
+    }
+}
+
+.joms-module__wrapper,
+.joms-module__wrapper--stacked {
+    @extend %clearfix;
+    margin-bottom: ms();
+    &:empty {
+        display: none;
+    }
+    .video-player img {
+        max-width: 100%;
+        vertical-align: middle;
+        height: auto;
+    }
+    .joms-module__footer {
+        .joms-button--link {
+            color: color-contrast($scss-color-module-background);
+        }
+    }
+}
+
+.joms-module__footer {
+    margin-top: ms();
+}
+
+.joms-module__header {
+    font-weight:bold;
+    background: $scss-color-module-background;
+    color: color-contrast($scss-color-module-background);
+    padding:ms(-1);
+    text-align: center;
+}
+
+.joms-module--stacked {
+    margin-bottom: ms();
+}
+
+.joms-module__body {
+    background: $scss-color-module-background;
+    padding: ms();
+}

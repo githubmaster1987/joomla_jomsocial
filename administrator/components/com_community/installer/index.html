@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8"/>
+	<title>JomSocial Web Installer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="JomSocial Web Installer">
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/bootstrap.min.css" media="screen" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css" media="screen" /> -->
+	<link rel="stylesheet" type="text/css" href="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/css/style.css" media="screen" />
+	<!-- <link rel="shortcut icon" type="images/ico" href="" /> -->
+    <!--[if IE]>
+    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="<?php echo JURI::root(); ?>/administrator/components/com_community/installer/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<div id="js-installer">
+			<div class="js-header">
+				<h1>JomSocial</h1>
+			</div>
+			<div class="tabbable tabs-left">
+
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#step-one" data-toggle="tab">Welcome</a></li>
+					<li><a href="#step-two" data-toggle="tab">Checking requirements</a></li>
+					<li><a href="#step-three" data-toggle="tab">Installing backend</a></li>
+					<li><a href="#step-four" data-toggle="tab">Installing AJAX</a></li>
+					<li><a href="#step-five" data-toggle="tab">Installing frontend</a></li>
+					<li><a href="#step-six" data-toggle="tab">Installing templates</a></li>
+					<li><a href="#step-seven" data-toggle="tab">Preparing database</a></li>
+					<li><a href="#step-eight" data-toggle="tab">Updating database</a></li>
+					<li><a href="#step-nine" data-toggle="tab">Installing plugins</a></li>
+					<li><a href="#step-ten" data-toggle="tab">Done</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="step-one">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">JomSocial Installer</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+
+						<h3>Another great extension brought to you by the JomSocial team.</h3>
+						<p>For further information you, browse through documentation at <a href="http://www.jomsocial.com/support.html">http://www.jomsocial.com/support.html</a></p>
+						<p>For support, please visit our Q&amp;A at <a href="http://www.jomsocial.com/answers">http://www.jomsocial.com/answers</a> or email us at <strong>support@jomsocial.com</strong></p>
+
+						<div class="well">
+							<p>If any of these are not supported (marked as No), your system does not meet the minimum requirements for installation. Please correct the errors before proceeding.</p>
+							<div class="tabular-data">
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>JPEG Library</td>
+											<td><span class="badge badge-important">No</span></td>
+											<td class="muted">You will be able to upload JPEG images.</td>
+										</tr>
+										<tr>
+											<td>PNG Library</td>
+											<td><span class="badge badge-success">Yes</span></td>
+											<td class="muted">You will be able to upload PNG images.</td>
+										</tr>
+										<tr>
+											<td>GIF Library</td>
+											<td><span class="badge badge-success">Yes</span></td>
+											<td class="muted">You will be able to upload GIF images.</td>
+										</tr>
+										<tr>
+											<td>GD Library</td>
+											<td><span class="badge badge-success">Yes</span></td>
+											<td class="muted">You will be able to use the GD Library to manipulate images.</td>
+										</tr>
+										<tr>
+											<td>GD2 Library</td>
+											<td><span class="badge badge-success">Yes</span></td>
+											<td class="muted">You will be able to use the GD2 Library to manipulate images.</td>
+										</tr>
+										<tr>
+											<td>cURL Library</td>
+											<td><span class="badge badge-success">Yes</span></td>
+											<td class="muted">You will be able to upload cURL images.</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-two">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Checking requirements</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Backend archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>AJAX archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Frontend archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-important">Error</span></td>
+										</tr>
+										<tr>
+											<td>Template archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Core plugin archive</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-three">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial backend system</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Installation</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-four">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial AJAX system</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Extracting</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-five">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial frontend system</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Installation</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-six">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial template system</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Installation</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-seven">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Preparing your JomSocial database</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Installation</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-eight">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Updating your JomSocial database</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Update configuration</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Creating menu items</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Creating a JomSocial toolbar</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+										<tr>
+											<td>Adding custom fields</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-nine">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installing JomSocial plugins</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="well">
+							<div class="tabular-data loosemargin">
+								<div class="progress progress-striped active">
+									<div class="bar" style="width: 40%;"></div>
+								</div>
+
+								<table class="table">
+									<tbody>
+										<tr>
+											<td>Extracting plugins</td>
+											<td>&nbsp;</td>
+											<td class="right"><span class="badge badge-success">Done</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="tab-pane" id="step-ten">
+						<div class="js-title clearfix">
+							<h2 class="pull-left">Installation completed.</h2>
+							<div class="pull-right">
+								<a href="#" class="btn btn-primary">Next &raquo;</a>
+							</div>
+						</div>
+						<div class="alert alert-success">
+							Your installation is now complete. 
+						</div>
+						<div class="well js-done">
+							<h3>Important!</h3>
+							<p>
+								Before you begin, here are a few helpful documentation articles you might want to explore:
+							</p>
+							<ul>
+								<li><a href="#">Creating menu links</a></li>
+								<li><a href="#">Setting up scheduled task to process email</a></li>
+								<li><a href="#">Installing applications for JomSocial</a></li>
+								<li><a href="#">Installing modules for JomSocial</a></li>
+							</ul>
+							<p class="last">
+								You can read the full set of documentation here: <a href="#">JomSocial Documentation</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+

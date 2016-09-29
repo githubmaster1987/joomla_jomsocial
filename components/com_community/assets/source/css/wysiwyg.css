@@ -1,0 +1,58 @@
+.trumbowyg-box {
+    background-color: #FEFEFE;
+    margin: 0;
+}
+
+.trumbowyg-box,
+.trumbowyg-editor {
+    min-height: 150px;
+    width: 100%;
+}
+
+.trumbowyg-editor ol,
+.trumbowyg-editor ul {
+    margin: 0 0 9px 25px !important;
+    padding: 0 !important;
+}
+
+.trumbowyg-editor ol {
+    list-style: decimal !important;
+}
+
+.trumbowyg-editor ul {
+    list-style: disc !important;
+}
+
+.trumbowyg-button-pane {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.trumbowyg-modal-title {
+    margin: 0 !important;
+}
+
+.trumbowyg-modal-box {
+    padding-bottom: 55px;
+}
+
+.trumbowyg-modal-box form {
+    margin: 15px 15px 0 !important;
+}
+
+.trumbowyg-modal-box .joms-input {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+.trumbowyg-modal-box .joms-button--primary {
+    position: absolute;
+        bottom: 7px;
+        right: 15px;
+}
+
+.trumbowyg-modal-box .joms-button--neutral {
+    position: absolute;
+        bottom: 7px;
+        left: 15px;
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JS Notifications</name>
+	<author>iJoomla</author>
+	<creationDate>June 2015</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.2.4</version>
+	<description>Notifications module for JomSocial</description>
+	<files>
+		<filename module="mod_community_notifications">mod_community_notifications.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_community_notifications.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>style.css</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_notifications.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic">
+                <field name="show_notification" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_NOTIFICATIONS_SHOW_GLOBAL_SETTINGS" description="MOD_COMMUNITY_NOTIFICATIONS_SHOW_GLOBAL_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_privatemsg" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_NOTIFICATIONS_SHOW_PRIVATEMSG_SETTINGS" description="MOD_COMMUNITY_NOTIFICATIONS_SHOW_PRIVATEMSG_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_request" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_NOTIFICATIONS_SHOW_FREQUEST_SETTINGS" description="MOD_COMMUNITY_NOTIFICATIONS_SHOW_FREQUEST_DESC">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+			</fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>

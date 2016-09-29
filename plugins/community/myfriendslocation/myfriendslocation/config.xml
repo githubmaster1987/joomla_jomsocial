@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="community">
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <params>
+        <param name="count" type="text" default="10" size="3" label="PLG_COMMUNITY_COUNT_SETTINGS" description="PLG_COMMUNITY_COUNT_SETTINGSgit c" />
+    </params>
+</extension>

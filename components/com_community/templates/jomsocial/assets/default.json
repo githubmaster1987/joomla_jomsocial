@@ -1,0 +1,19 @@
+{
+    "core": {
+        "css": [
+            "old",
+            "style"
+        ],
+        "js": [
+        ]
+    },
+    "views": {
+        "frontpage": {
+            "css": [
+            ],
+            "js": [
+                "frontpage"
+            ]
+        }
+    }
+}

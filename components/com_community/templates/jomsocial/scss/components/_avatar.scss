@@ -1,0 +1,181 @@
+%avatar {
+
+    display:inline-block;
+    line-height:0;
+
+    @if $scss-avatar-shape == circle {
+        @extend %circle;
+    }
+
+
+    @if $scss-avatar-style == bordered {
+        @extend %bordered;
+        padding:3px;
+        background:white;
+    }
+
+}
+
+
+.joms-avatar {
+    img {
+        @extend %avatar;
+        width: 100%;
+        max-width: 64px ;
+        max-height: 64px;
+        .joms-stream__body & {
+            max-width:128px;
+            max-height: 128px;
+        }
+    }
+    &.single img {
+        max-width: 120px;
+        max-height: 120px;
+    }
+}
+
+.joms-avatar--stream,
+.joms-avatar--comment,
+.joms-avatar--focus {
+    display:table-cell;
+    width:48px;
+    position: relative;
+    a {
+        display:block;
+        position: relative;
+    }
+    img {
+        max-width:48px;
+        @extend %avatar;
+    }
+    &.square img {
+        border-radius: 0;
+        -webkit-border-radius:0;
+        -moz-border-radius: 0;
+    }
+    &.video-thumb {
+        width: 64px;
+        img {
+            max-width: 64px;
+        }
+    }
+}
+
+.joms-avatar--video {
+    display: table-cell;
+    width: 64px;
+
+    img {
+        max-width:64px;
+        @extend %avatar;
+    }
+
+    a {
+        position: relative;
+        display: block;
+    }
+
+    &.square img {
+        border-radius: 0;
+        -webkit-border-radius:0;
+        -moz-border-radius: 0;
+    }
+
+    &.video-thumb {
+        width: 64px;
+        img {
+            max-width: 64px;
+        }
+    }
+}
+
+.joms-online a {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+        content:'';
+        position: absolute;
+
+        @if $scss-avatar-shape == circle {
+            right: 3px;
+            bottom: 3px;
+        } @else {
+            right: 5px;
+            top: 5px;
+        }
+        width:14px;
+        height:14px;
+        color: #8BC34A;
+        z-index:2;
+        @extend %circle;
+        background: #8BC34A;
+        border: 2px solid white;
+    }
+
+
+
+
+    @include media('small') {
+        width: 100%;
+        max-width: 64px;
+        margin: auto;
+    }
+}
+
+.joms-avatar--focus {
+    &.joms-online a {
+
+        &:after {
+
+            @if $scss-avatar-shape == circle {
+                right: 7px;
+                bottom: 7px;
+            } @else {
+                right: 6px;
+                top: 6px;
+            }
+            width:20px;
+            height:20px;
+            border: 3px solid white;
+        }
+
+        @include media('small') {
+            &:after {
+                right: 2px;
+            }
+        }
+    }
+}
+
+.joms-avatar--comment {
+    width:32px;
+}
+
+.joms-avatar--focus {
+    width: 64px;
+    img {
+        max-width: 64px;
+    }
+    svg {
+        cursor: pointer;
+        display: none;
+        fill: rgba( 0, 0, 0, .6);
+        margin: auto;
+        position: absolute;
+        top: 0; left: 0; bottom: 0; right: 0;
+        width: 40px;
+        height: 40px;
+    }
+    @include media('medium') {
+        width: 100px;
+        img {
+            max-width: 100px;
+        }
+        svg {
+            top: -5px;
+            width: 64px;
+            height: 64px;
+        }
+    }
+}

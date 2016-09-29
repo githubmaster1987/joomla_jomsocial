@@ -1,0 +1,48 @@
+.joms-page {
+    background: $scss-color-secondary-background;
+    padding: ms();
+    position: relative;
+    .joms-module__wrapper & {
+        padding: 0;
+    }
+
+    // Style tweak for embedly.ly media blocks
+    .embedly-card {
+        margin-top: ms();
+        margin-bottom: ms();
+    }
+    
+    .embedly-card-hug {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 !important;
+        padding: 5px 10px 0 !important;
+
+        @include media('medium') {
+            max-width: 480px !important;
+        }
+    }
+}
+
+.joms-page__title {
+    color: $page-title-color;
+    margin-bottom: ms(1);
+}
+
+.joms-page--search {
+    display: none;
+    @include media('medium') {
+        display: block;
+    }
+}
+
+.joms-page--search__results {
+	.joms-list__search {
+		.joms-list__utilities {
+			display: block;
+            @include media('medium') {
+                display: none;
+            }
+		}
+	}
+}

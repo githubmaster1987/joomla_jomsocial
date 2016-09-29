@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="4.0" client="site" method="upgrade">
+    <name>JS Nearby Events Search</name>
+    <author>iJoomla</author>
+    <creationDate>April 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 JomSocial. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://www.jomsocial.com</authorUrl>
+    <version>4.2.4</version>
+    <description>Nearby events search module for JomSocial</description>
+    <files>
+        <folder>assets</folder>
+        <folder>tmpl</folder>
+        <filename module="mod_community_nearbyevents">mod_community_nearbyevents.php</filename>
+        <filename>helper.php</filename>
+        <filename>mod_community_nearbyevents.xml</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_community_nearbyevents.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="event_nearby_radius" type="list" default="10"
+                       description="MOD_COMMUNITY_NEARBYEVENTS_RADIUS_DESC"
+                       label="MOD_COMMUNITY_NEARBYEVENTS_RADIUS_SETTINGS">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </field>
+                <field name="eventradiusmeasure" type="list" default="miles"
+                       description="MOD_COMMUNITY_NEARBYEVENTS_RADIUSMETRIC_DESC"
+                       label="MOD_COMMUNITY_NEARBYEVENTS_RADIUSMETRIC_SETTINGS">
+                    <option value="miles">MOD_COMMUNITY_NEARBYEVENTS_MILES_OPTION</option>
+                    <option value="km">MOD_COMMUNITY_NEARBYEVENTS_KM_OPTION</option>
+                </field>
+                <field name="auto_detect_location" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_NEARBYEVENTS_AUTODETECT_SETTINGS"
+                       description="MOD_COMMUNITY_NEARBYEVENTS_AUTODETECT_DESC">
+                    <option value="1">MOD_COMMUNITY_NEARBYEVENTS_SHOW_OPTION</option>
+                    <option value="0">MOD_COMMUNITY_NEARBYEVENTS_HIDE_OPTION</option>
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

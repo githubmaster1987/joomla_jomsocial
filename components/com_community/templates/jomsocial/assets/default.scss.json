@@ -1,0 +1,24 @@
+{
+    "colors": {
+        "scss-color-primary": "5677FC",
+        "scss-color-secondary": "259B24",
+        "scss-color-neutral": "ECF0F1",
+        "scss-color-important": "E74C3C",
+        "scss-color-info": "E67E22",
+        "scss-color-background": "ECF0F1",
+        "scss-color-toolbar": "F5F7F7",
+        "scss-color-focus-background": "FFFFFF",
+        "scss-color-postbox": "FFFFFF",
+        "scss-color-postbox-tab": "F5F5F5",
+        "scss-color-module-background": "FFFFFF",
+        "scss-color-moduletab-background": "E0E7E8",
+        "scss-color-dropdown-background": "FFFFFF",
+        "scss-color-dropdown-border": "E3E5E7"
+    },
+    "general": {
+        "scss-stream-position": "right",
+        "scss-button-style": "flat",
+        "scss-avatar-shape": "circle",
+        "scss-avatar-style": "bordered"
+    }
+}

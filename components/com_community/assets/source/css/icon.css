@@ -1,0 +1,19 @@
+img.joms-emoticon {
+    background: none;
+}
+
+.joms-icon__attending,
+.joms-icon__not-attending {
+    background: transparent url('../../rsvp.png') no-repeat;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+.joms-icon__attending {
+    background-position: 0 -9px;
+}
+
+.joms-icon__not-attending {
+    background-position: 0 -37px;
+}

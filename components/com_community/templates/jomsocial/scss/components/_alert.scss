@@ -1,0 +1,79 @@
+%alert {
+    display: inline-block;
+    width: 100%;
+    padding: ms(-1) ms();
+    vertical-align: middle;
+    font-size: 12px;
+    margin-bottom: ms();
+    @extend %rounded;
+}
+
+.joms-alert__head {
+    margin-top: ms(-2);
+}
+
+.joms-alert__body {
+    display: block;
+
+    @include media('medium') {
+        display: table;
+        width: 100%;
+    }
+}
+
+.joms-alert__content,
+.joms-alert__actions {
+    display: block;
+    vertical-align: middle;
+
+    @include media('medium') {
+        display: table-cell;
+    }
+}
+
+.joms-alert__content {
+    padding: 0;
+
+    > span {
+        display: block;
+        font-size: $font-size-small;
+    }
+
+    @include media('medium') {
+        padding-right: 10px;
+    }
+}
+
+.joms-alert__actions {
+    margin-top: ms();
+    white-space: nowrap;
+    text-align: right;
+
+    @include media('medium') {
+        margin-top: 0;
+    }
+}
+
+.joms-alert--warning {
+    @extend %alert;
+    color: $scss-color-warning;
+    background: $scss-color-warning-background;
+}
+
+.joms-alert--danger {
+    @extend %alert;
+    color: $scss-color-danger;
+    background: $scss-color-danger-background;
+}
+
+.joms-alert--info {
+    @extend %alert;
+    color: $scss-color-note;
+    background: $scss-color-note-background;
+}
+
+.joms-alert--success {
+    @extend %alert;
+    color: $scss-color-success;
+    background: $scss-color-success-background;
+}

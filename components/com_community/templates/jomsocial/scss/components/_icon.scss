@@ -1,0 +1,97 @@
+.joms-icon {
+    display: inline-block;
+    vertical-align:middle;
+    width: ms();
+    height: ms();
+    fill: $scss-color-icon;
+    position:relative;
+}
+
+.joms-icon--responsive {
+    width: 100%;
+    height: auto;
+}
+
+.joms-icon--add {
+    position:absolute;
+    top:24px;
+    fill: $color-concrete;
+
+    @if ($scss-direction==rtl) {
+        left:77px;
+
+        .joms-no-touch & {
+            left: 24px;
+        }
+    } @else {
+        right:77px;
+
+        .joms-no-touch & {
+            right: 24px;
+        }
+    }
+
+    .joms-page--inbox & {
+        top: ms();
+        right: ms();
+    }
+}
+
+.joms-icon--white {
+    fill: white;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+    max-width: none;
+}
+
+// Supporting old emoticon on previous version
+.joms-emoticon{width:20px;height:20px;display:inline-block;vertical-align:middle;background-image:url('../images/emo.png');}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx){.joms-emoticon{background-image:url("../images/emo@2x.png");background-size:140px 180px;}}.joms-emoticon.joms-emo-laugh{background-position:0 0px;}
+.joms-emoticon.joms-emo-happy{background-position:-20px 0px;}
+.joms-emoticon.joms-emo-giggle{background-position:-40px 0px;}
+.joms-emoticon.joms-emo-smile{background-position:-60px 0px;}
+.joms-emoticon.joms-emo-pretty{background-position:-80px 0px;}
+.joms-emoticon.joms-emo-wink{background-position:-100px 0px;}
+.joms-emoticon.joms-emo-loved{background-position:-120px 0px;}
+.joms-emoticon.joms-emo-love-whistle{background-position:0 -20px;}
+.joms-emoticon.joms-emo-blush-whistle{background-position:-20px -20px;}
+.joms-emoticon.joms-emo-whistle{background-position:-40px -20px;}
+.joms-emoticon.joms-emo-happy-whistle{background-position:-60px -20px;}
+.joms-emoticon.joms-emo-tongue-wink{background-position:-80px -20px;}
+.joms-emoticon.joms-emo-tongue-happy{background-position:-100px -20px;}
+.joms-emoticon.joms-emo-tongue{background-position:-120px -20px;}
+.joms-emoticon.joms-emo-surprised{background-position:0 -40px;}
+.joms-emoticon.joms-emo-irretated{background-position:-20px -40px;}
+.joms-emoticon.joms-emo-huff{background-position:-40px -40px;}
+.joms-emoticon.joms-emo-bored{background-position:-80px -40px;}
+.joms-emoticon.joms-emo-ohno{background-position:-120px -40px;}
+.joms-emoticon.joms-emo-sad{background-position:0 -60px;}
+.joms-emoticon.joms-emo-happy-tear{background-position:-20px -60px;}
+.joms-emoticon.joms-emo-cry{background-position:-40px -60px;}
+.joms-emoticon.joms-emo-sleepy{background-position:-60px -60px;}
+.joms-emoticon.joms-emo-sad{background-position:-100px -40px;}
+.joms-emoticon.joms-emo-worry{background-position:-100px -60px;}
+.joms-emoticon.joms-emo-relieved{background-position:-120px -60px;}
+.joms-emoticon.joms-emo-upset{background-position:-20px -80px;}
+.joms-emoticon.joms-emo-very-sad{background-position:-40px -80px;}
+.joms-emoticon.joms-emo-shocked{background-position:-80px -80px;}
+.joms-emoticon.joms-emo-angry{background-position:-120px -80px;}
+.joms-emoticon.joms-emo-exhale{background-position:0 -100px;}
+.joms-emoticon.joms-emo-annoyed{background-position:-20px -100px;}
+.joms-emoticon.joms-emo-excited{background-position:-40px -100px;}
+.joms-emoticon.joms-emo-yummy{background-position:-60px -100px;}
+.joms-emoticon.joms-emo-sick{background-position:-80px -100px;}
+.joms-emoticon.joms-emo-sunglass{background-position:-100px -100px;}
+.joms-emoticon.joms-emo-tired{background-position:-120px -100px;}
+.joms-emoticon.joms-emo-eye-cross{background-position:-20px -120px;}
+.joms-emoticon.joms-emo-confuse{background-position:-80px -120px;}
+.joms-emoticon.joms-emo-devil{background-position:-100px -120px;}
+.joms-emoticon.joms-emo-devil-angry{background-position:-120px -120px;}
+.joms-emoticon.joms-emo-wow{background-position:0 -140px;}
+.joms-emoticon.joms-emo-grin-worry{background-position:-20px -140px;}
+.joms-emoticon.joms-emo-speechless{background-position:-40px -140px;}
+.joms-emoticon.joms-emo-meh{background-position:-60px -140px;}
+.joms-emoticon.joms-emo-woo{background-position:-80px -140px;}
+.joms-emoticon.joms-emo-speachless{background-position:-100px -140px;}
+.joms-emoticon.joms-emo-blessed{background-position:-120px -140px;}

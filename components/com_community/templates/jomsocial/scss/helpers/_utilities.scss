@@ -1,0 +1,247 @@
+.joms-hide {
+    display:none;
+}
+
+%rounded {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+
+%box-sizing {
+    * {
+        box-sizing: border-box;
+    }
+}
+
+%rounded--small {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+%rounded--big {
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+}
+
+
+%rounded--top {
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+%rounded--bottom {
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    -o-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+%bordered {
+    border:1px solid rgba(0,0,0,0.12);
+}
+
+%circle {
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+}
+
+%square {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+}
+
+
+%arrow--top {
+    &:after,
+    &:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-bottom-color: $scss-color-dropdown-background;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+
+    &:before {
+        border-bottom-color: $scss-color-dropdown-border;
+        border-width: 9px;
+        margin-left: -9px;
+    }
+}
+
+.joms-arrow--top {
+    @extend %arrow--top;
+}
+
+.joms-arrow--top-left {
+    @extend %arrow--top;
+    &:after,
+    &:before {
+
+        @if ($scss-direction==rtl) {
+            right: 16px;
+            left: auto;
+        } @else {
+            left: 16px;
+            right: auto;
+        }
+
+
+
+    }
+}
+
+%arrow--bottom {
+    &:after,
+    &:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-top-color: $scss-color-dropdown-background;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+
+    &:before {
+        border-top-color: $scss-color-dropdown-border;
+        border-width: 9px;
+        margin-left: -9px;
+    }
+}
+
+%hidden-small {
+    @include media('small') {
+        display:none !important;
+    }
+}
+
+.joms-hidden--small {
+    @extend %hidden-small;
+}
+
+%hidden-medium {
+    @include media('medium') {
+        display:none !important;
+    }
+}
+
+.joms-hidden--medium {
+    @extend %hidden-medium;
+}
+
+%hidden-large {
+    @include media('large') {
+        display:none !important;
+    }
+}
+
+%box-shadow {
+    -webkit-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+
+.desktop-only--inline-block {
+    display:none !important;
+    @include media('large') {
+        display:inline-block !important;
+    }
+}
+
+.mobile-only--show {
+    display:none !important;
+    @include media('small') {
+        display: block !important;
+    }
+}
+
+.mobile-only-landscape--show {
+    display:none !important;
+    @include media('medium-end') {
+        display: block !important;
+    }
+}
+
+.no-border {
+    border: 0;
+}
+
+.joms-gap {
+    height:ms();
+}
+
+.joms-gap--small {
+    height: ms(-2);
+}
+
+.joms-gap--inline {
+    width:ms(-1);
+    display: none;
+    @include media('medium') {
+        display: inline-block;
+    }
+}
+
+.reset-gap {
+    margin:0 !important;
+}
+
+.joms-centered {
+    text-align: center;
+}
+
+.joms-push {
+    margin-bottom: ms();
+}
+
+.joms-push--large {
+    margin-bottom: ms(1);
+}
+
+.joms-padding {
+    padding: ms();
+}
+
+.joms-block {
+    display: block;
+}
+
+.joms-relative {
+    position: relative;
+}
+
+.joms-divider {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: none;
+    margin: ms(1) 0;
+    height: 0;
+}

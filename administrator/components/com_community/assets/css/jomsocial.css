@@ -1,0 +1,54 @@
+.trumbowyg-modal {
+    left: 0;
+    margin-left: 0;
+    max-width: 100%;
+}
+
+.trumbowyg-modal-box {
+    left: 0;
+    margin-left: 2px;
+    max-width: 99%;
+}
+
+.trumbowyg-modal-box .joms-form__group {
+    color: #7f8c8d;
+    position: relative;
+    margin-bottom: 14px;
+    display: block;
+}
+
+@media only screen and (min-width: 481px) {
+    .trumbowyg-modal-box .joms-form__group {
+        display: table;
+        width: 100%;
+    }
+}
+
+.trumbowyg-modal-box .joms-form__group > span:first-child {
+    display: table-cell;
+    width: 140px;
+    padding-right: 14px;
+    vertical-align: middle;
+}
+
+.trumbowyg-modal-box .joms-button--primary {
+    background: #5677fc;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    color: #fff !important;
+    padding: 8px 14px;
+}
+
+.trumbowyg-modal-box .joms-button--neutral {
+    background: #ecf0f1;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+            border-radius: 3px;
+    padding: 8px 14px;
+    position: absolute;
+    bottom: 7px;
+    left: 15px;
+}

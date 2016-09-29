@@ -1,0 +1,27 @@
+{
+    "boss": true,
+    "curly": false,
+    "eqeqeq": true,
+    "eqnull": true,
+    "expr": true,
+    "immed": true,
+    "noarg": true,
+    "onevar": true,
+    "quotmark": "single",
+    "smarttabs": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true,
+
+    "browser": true,
+    "jquery": true,
+    "node": true,
+
+    "globals": {
+        "define": true,
+        "require": true,
+
+        "joms": true,
+        "joms_friends": true
+    }
+}

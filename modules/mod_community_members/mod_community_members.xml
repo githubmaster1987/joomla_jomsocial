@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+    <name>JS Members</name>
+    <author>iJoomla</author>
+    <creationDate>April 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.2.4</version>
+    <description>Members module for JomSocial</description>
+    <files>
+        <filename module="mod_community_members">mod_community_members.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>mod_community_members.xml</filename>
+        <filename>models/fields/jsprofiletypes.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_members.ini</language>
+    </languages>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_community_members/models/fields">
+            <fieldset name="basic">
+                <field name="profile_filter" type="radio" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_MEMBERS_FILTERPROFILE_SETTINGS" description="MOD_COMMUNITY_MEMBERS_FILTERPROFILE_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="jsprofiletypes" type="jsprofiletypes" label="MOD_COMMUNITY_MEMBERS_SELECTPROFILE_SETTINGS"
+                       description="MOD_COMMUNITY_MEMBERS_SELECTPROFILE_DESC"
+                       required="true" />
+                <field name="sorting" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_MEMBERS_SORTING_SETTINGS" description="MOD_COMMUNITY_MEMBERS_SORTING_DESC">
+                    <option value="0">MOD_COMMUNITY_MEMBERS_NEWEST_OPTIONS</option>
+                    <option value="1">MOD_COMMUNITY_MEMBERS_POPULAR_OPTIONS</option>
+                    <option value="2">MOD_COMMUNITY_MEMBERS_FEATURED_OPTIONS</option>
+                    <option value="3">MOD_COMMUNITY_MEMBERS_FRIENDS_OPTIONS</option>
+                    <option value="4">MOD_COMMUNITY_MEMBERS_ONLINE_OPTIONS</option>
+                </field>
+                <field name="respect_online" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_MEMBERS_RESPECTONLINE_SETTINGS" description="MOD_COMMUNITY_MEMBERS_RESPECTONLINE_DESC">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="show_total_members" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_MEMBERS_SHOW_TOTAL_MEMBERS_SETTINGS" description="MOD_COMMUNITY_MEMBERS_SHOW_TOTAL_MEMBERS_SETTINGS">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="limit" type="text" class="btn-group btn-group-yesno" default="12" label="MOD_COMMUNITY_MEMBERS_LIMIT_SETTINGS" description="MOD_COMMUNITY_MEMBERS_LIMIT_DESC"/>
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

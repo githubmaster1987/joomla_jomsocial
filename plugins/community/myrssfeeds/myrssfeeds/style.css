@@ -1,0 +1,5 @@
+#application-feeds  { display: inline-block; width: 100%; }
+#application-feeds .feed-row + .feed-row { border-top: 1px solid #e5e5e5; padding-top: 20px; margin-top: 20px; }
+#application-feeds .feed-title { font-size: 150%; line-height: normal; margin: 5px 0 10px; }
+#application-feeds .feed-date  { color: #999; font-size: 11px; text-transform: uppercase; font-family: tahoma;}
+#application-feeds .feed-content img { max-width: 100%; height: auto; }

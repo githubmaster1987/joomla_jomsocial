@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>Facebook Like Reaction System</title>
+		<meta name="description" content="Facebook Like Reaction System" />
+		<meta name="author" content="Arkaprava Majumder" />
+		<!-- bootstrap css -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<!-- Css for reaction system -->
+		<link rel="stylesheet" type="text/css" href="css/reaction.css" />
+		
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<!-- jQuery for Reaction system -->
+		<script type="text/javascript" src="js/reaction.js"></script>
+    </head>
+    <body>
+		<div class="nav-top clearfix">
+			<span class="left"><a  title="CoderExample" href="http://coderexample.com/" ><span> <i class="lh1 fa fa-angle-left"></i>CODER<i class="lh1 fa fa-angle-right"></i><i class="lh1 fa fa-angle-left"></i>/EXAMPLE<i class="lh1 fa fa-angle-right"></i></span></a></span>
+			
+			<span class="left"><a target="_blank" rel="nofollow" href="https://www.facebook.com/sharer/sharer.php?u=http://coderexample.com/fetch-query-string-parameters-from-url-in-javascript/" title="Share on Facebook" ><span> <i class="lh1 fa fa-facebook"></i></span></a></span>
+			
+			<span class="left"><a target="_blank" rel="nofollow" href="https://twitter.com/intent/tweet?url=http://coderexample.com/fetch-query-string-parameters-from-url-in-javascript/&text=Fetch Query String in javascript&via=coderexample" title="Share on  Twitter" ><span> <i class="lh1 fa fa-twitter"></i></a></span>
+			
+			<span class="right"><a  href="http://coderexample.com/fetch-query-string-parameters-from-url-in-javascript/"><i class="lh1 fa fa-arrow-left"></i> <span class="header-nav">Back to Tutorial Article</span></a></span>
+		</div>
+        <div class="container">
+			<div class="header">
+				<h1>Facebook Like Reaction System</h1>	
+			</div>
+			<div class="main">
+				<!-- Reaction system start -->
+				<div class="facebook-reaction"><!-- container div for reaction system -->
+					<span class="like-btn"> <!-- Default like button -->
+						<span class="like-btn-emo like-btn-default"></span> <!-- Default like button emotion-->
+						<span class="like-btn-text">Like</span> <!-- Default like button text,(Like, wow, sad..) default:Like  -->
+						  <ul class="reactions-box"> <!-- Reaction buttons container-->
+								<li class="reaction reaction-like" data-reaction="Like"></li>
+								<li class="reaction reaction-love" data-reaction="Love"></li>
+								<li class="reaction reaction-haha" data-reaction="HaHa"></li>
+								<li class="reaction reaction-wow" data-reaction="Wow"></li>
+								<li class="reaction reaction-sad" data-reaction="Sad"></li>
+								<li class="reaction reaction-angry" data-reaction="Angry"></li>
+						  </ul>
+					</span>
+					<div class="like-stat"> <!-- Like statistic container-->
+						<span class="like-emo"> <!-- like emotions container -->
+							<span class="like-btn-like"></span> <!-- given emotions like, wow, sad (default:Like) -->
+						</span>
+						<span class="like-details">Arkaprava Majumder and 1k others</span>
+					</div>
+				 </div>
+				<!-- Reaction system end -->
+			</div>
+			<div class="main-related">
+				<div class="header-related">
+					<h2>You might also like:</h2>	
+				</div>
+				<ul>
+					<li><a href="http://coderexample.com/whats-new-in-bootstrap4/" title="Take a look all the cool new things that were added or updated in #Bootstrap4" >What's new in Bootstrap 4</a></li>
+					<li><a href="http://coderexample.com/my-first-reaction-on-facebooks-react-js/" title="My first reaction on facebook’s react.js" >My first reaction on facebook’s react.js</a></li>
+					<li><a href="http://coderexample.com/restful-api-in-lumen-a-laravel-micro-framework/" title="RESTful API in Lumen, A Laravel Micro Framework)" >RESTful API in Lumen, A Laravel Micro Framework</a></li>  
+					<li><a href="http://coderexample.com/datatable-demo-server-side-in-phpmysql-and-ajax/" title="DataTable demo (Server side) in Php,Mysql and Ajax" >DataTable demo (Server side) in Php,Mysql and Ajax</a></li>	
+				</ul>
+			</div>
+        </div>
+		<div class="footer-area clearfix">
+			Made with ♡ in India ©2016
+			<a href="http://coderexample.com/" title="CoderExample"> CoderExample</a>
+		</div>
+    </body>
+</html>

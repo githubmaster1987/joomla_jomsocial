@@ -1,0 +1,6 @@
+<?PHP die();
+/*SPLIT
+Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJjb3VudGVyIjtpOjE7czo3OiJmb2xkZXJzIjthOjE6e2k
+6MDtPOjM6Ik1ETyI6Mjp7czozOiJfaWQiO2k6MjtzOjQ6ImRhdGEiO086ODoic3RkQ2xhc3MiOj
+I6e3M6NDoibmFtZSI7czo2OiJKb29tbGEiO3M6NDoicGF0aCI7czozMjoiL2hvbWUvcmVhZHlja
+GkvcHVibGljX2h0bWwvc2l0ZTkiO319fX0=

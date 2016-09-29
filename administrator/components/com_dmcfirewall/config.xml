@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="emailOptions" label="CONFIG_EMAIL_OPTIONS_HEADER" description="CONFIG_EMAIL_OPTIONS_HEADER_DESC">
+		<field name="enableEmails" type="list" default="2"
+			label="CONFIG_ENABLE_EMAILS_LABEL"
+			description="CONFIG_ENABLE_EMAILS_DESC">
+			<option value="0">JNo</option>
+			<option value="1">CONFIG_ENABLE_EMAILS_ONLY_ERRORS</option>
+			<option value="2">JYes</option>
+			<option value="3">CONFIG_ENABLE_EMAILS_ALL_EXCEPT_ERRORS</option>
+		</field>
+		
+		<field
+			name="emailsBadBots"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_EMAILS_BAD_BOTS_LABEL"
+			description="CONFIG_EMAILS_BAD_BOTS_DESC"
+			filter="integer">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		<field
+			name="emailsHackAttempts"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_EMAILS_HACK_ATTEMPTS_LABEL"
+			description="CONFIG_EMAILS_HACK_ATTEMPTS_DESC"
+			filter="integer">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		<field
+			name="emailsSQLInjections"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_EMAILS_SQL_INJECTION_LABEL"
+			description="CONFIG_EMAILS_SQL_INJECTION_DESC"
+			filter="integer">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		<field
+			name="emailsEnableScheduledReporting"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_ENABLE_SCHEDULED_REPORTING_LABEL"
+			description="CONFIG_ENABLE_SCHEDULED_REPORTING_DESC"
+			filter="integer">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		<field
+			name="emailsScheduledReportingType"
+			type="list"
+			default="0"
+			label="CONFIG_EMAIL_SCHEDULED_REPORTING_TYPE_LABEL"
+			description="CONFIG_EMAIL_SCHEDULED_REPORTING_TYPE_DESC">
+			<option value="0">Plugin</option>
+			<option value="1">Cron Job</option>
+		</field>
+		<field name="emailsScheduledReportingTime" type="list" default="3"
+			label="CONFIG_SCHEDULED_REPORTING_TIME_LABEL"
+			description="CONFIG_SCHEDULED_REPORTING_TIME_DESC">
+			<option value="1">Once a day</option>
+			<option value="3">Every 3 days</option>
+			<option value="7">Every 7 days</option>
+			<option value="14">Every 14 days</option>
+			<option value="31">Every 31 days</option>
+		</field>
+		<field name="emailsScheduledReportingReportDuration" type="list" default="7"
+			label="CONFIG_SCHEDULED_REPORTING_REPORT_DURATION_LABEL"
+			description="CONFIG_SCHEDULED_REPORTING_REPORT_DURATION_DESC">
+			<option value="1">Last 24 hours</option>
+			<option value="3">Last 3 days</option>
+			<option value="7">Last 7 days</option>
+			<option value="14">Last 14 days</option>
+			<option value="31">Last 31 days</option>
+		</field>
+		<field name="emailOverride" type="text" default="" size="30"
+			label="CONFIG_EMAIL_OVERRIDE_LABEL"
+			description="CONFIG_EMAIL_OVERRIDE_DESC" />
+		<field name="updateEmailTime" type="list" default="12"
+			label="CONFIG_EMAIL_UPDATE_TIME_LABEL"
+			description="CONFIG_EMAIL_UPDATE_TIME_DESC">
+			<option value="1">Every 1 hour</option>
+			<option value="3">Every 3 hours</option>
+			<option value="7">Every 7 hours</option>
+			<option value="12">Every 12 hours</option>
+			<option value="24">Every 24 hours</option>
+		</field>
+		<field name="emailBadContentTime" type="list" default="12"
+			label="CONFIG_EMAIL_BAD_CONTENT_TIME_LABEL"
+			description="CONFIG_EMAIL_BAD_CONTENT_TIME_DESC">
+			<option value="1">Every 1 hour</option>
+			<option value="3">Every 3 hours</option>
+			<option value="7">Every 7 hours</option>
+			<option value="12">Every 12 hours</option>
+			<option value="24">Every 24 hours</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="securitySettings" label="CONFIG_SECURITY_SETTINGS_HEADER" description="CONFIG_SECURITY_SETTINGS_HEADER_DESC" addfieldpath="administrator/components/com_dmcfirewall/models/fields">
+		<field name="thresholdLimit" type="list" default="5"
+			label="CONFIG_THRESHOLD_LIMIT_LABEL"
+			description="CONFIG_THRESHOLD_LIMIT_DESC">
+			<option value="5">5</option>
+			<option value="10">10</option>
+			<option value="15">15</option>
+			<option value="20">20</option>
+			<option value="25">25</option>
+			<option value="30">30</option>
+			<option value="50">50</option>
+			<option value="100">100</option>
+		</field>
+		<field
+			name="sqlInjections"
+			type="textarea"
+			default="LyoqLztVTklPTitTRUxFQ1Q7dW5pb24gYWxsIHNlbGVjdDsjX191c2Vycztqb3NfdXNlcnM7Y29uY2F0KDsweDI2OzB4MjU7MHgzYTVmOzB4NWYzYQ=="
+			rows="7"
+			cols="85"
+			label="CONFIG_SQL_INJECTIONS_LABEL"
+			description="CONFIG_SQL_INJECTIONS_DESC"
+		/>
+		<field
+			name="hackAttempts"
+			type="textarea"
+			default="bW9zQ29uZmlnXztwcm9jL3NlbGYvO3Byb2Mvc2VsZi9lbnZpcm9uJTAwMDA7X1JFUVVFU1Q7R0xPQkFMUztiYXNlNjRfZW5jb2RlOyUwMDAwOy50eHQ/Oy4uLy4uLy4uLztwYXRoPWh0dHA6Ly8="
+			rows="7"
+			cols="85"
+			label="CONFIG_HACK_ATTEMPTS_LABEL"
+			description="CONFIG_HACK_ATTEMPTS_DESC"
+		/>
+		<field
+			name="snifferBadTerms"
+			type="textarea"
+			default="viagra,cialis,payday,loans,insurance"
+			rows="7"
+			cols="85"
+			label="CONFIG_SNIFFER_BAD_TERMS_LABEL"
+			description="CONFIG_SNIFFER_BAD_TERMS_DESC"
+		/>
+		<field
+			name="whitelistIPs"
+			type="textarea"
+			default=""
+			rows="7"
+			cols="85"
+			label="CONFIG_IP_WHITELIST_LABEL"
+			description="CONFIG_IP_WHITELIST_DESC"
+		/>
+		<field type="hiddenJS" name="Hidden JS" />
+	</fieldset>
+	
+	<fieldset name="botSettings" label="CONFIG_BOT_SETTINGS_HEADER" description="CONFIG_BOT_SETTINGS_HEADER_DESC">
+		<!-- CORE -->
+		<field
+			name="80legs"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="BAD_BOT_80LEGS_LABEL"
+			filter="integer">
+			<option
+				value="0">Ban</option>
+			<option
+				value="1">Allow</option>
+		</field>
+		<field
+			name="baiduspider"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="BAD_BOT_BAIDUSPIDER_LABEL"
+			filter="integer">
+			<option
+				value="0">Ban</option>
+			<option
+				value="1">Allow</option>
+		</field>
+		<field
+			name="nutch"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="BAD_BOT_NUTCH_LABEL"
+			filter="integer">
+			<option
+				value="0">Ban</option>
+			<option
+				value="1">Allow</option>
+		</field>
+		<field
+			name="screamingfrogseospider"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="BAD_BOT_SCREAMINGFROGSEOSPIDER_LABEL"
+			filter="integer">
+			<option
+				value="0">Ban</option>
+			<option
+				value="1">Allow</option>
+		</field>
+		<field
+			name="verticalpigeon"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="BAD_BOT_VERTICALPIGEON_LABEL"
+			filter="integer">
+			<option
+				value="0">Ban</option>
+			<option
+				value="1">Allow</option>
+		</field>
+		<field
+			name="wget"
+			type="radio"
+			class="btn-group"
+			default="0"
+			label="BAD_BOT_WGET_LABEL"
+			filter="integer">
+			<option
+				value="0">Ban</option>
+			<option
+				value="1">Allow</option>
+		</field>
+		<!-- END CORE -->
+	</fieldset>
+	
+	<fieldset name="statsModOptions" label="CONFIG_STATS_MOD_HEADER" description="CONFIG_STATS_MOD_HEADER_DESC">
+		<field
+			name="displayIssues"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_STATS_MOD_DISPLAY_ISSUES_LABEL"
+			description="CONFIG_STATS_MOD_DISPLAY_ISSUES_DESC">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		
+		<field
+			name="displayStats"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_STATS_MOD_ENABLE_STATS_LABEL"
+			description="CONFIG_STATS_MOD_ENABLE_STATS_DESC">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+		
+		<field
+			name="displayIcons"
+			type="radio"
+			class="btn-group"
+			default="1"
+			label="CONFIG_STATS_MOD_ICONS_LABEL"
+			description="CONFIG_STATS_MOD_ICONS_DESC"
+			filter="integer">
+			<option value="0">JNo</option>
+			<option value="1">JYes</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="advancedOptions" label="CONFIG_ADVANCED_OPTIONS_HEADER" description="CONFIG_ADVANCED_OPTIONS_HEADER_DESC">
+		<field name="testmode" type="radio" class="btn-group"
+			default="0" label="CONFIG_ENABLE_TESTMODE_LABEL"
+			description="CONFIG_ENABLE_TESTMODE_DESC">
+			<option value="0">Disabled</option>
+			<option value="1">Enabled</option>
+		</field>
+		<field name="securitynotice" type="radio" class="btn-group"
+			default="1" label="CONFIG_ENABLE_SECURITYNOTICE_LABEL"
+			description="CONFIG_ENABLE_SECURITYNOTICE_DESC">
+			<option value="0">Hidden</option>
+			<option value="1">Visible</option>
+		</field>
+	</fieldset>
+	
+	<fieldset name="downloadSettings" label="CONFIG_DOWNLOAD_HEADER" description="CONFIG_DOWNLOAD_HEADER_DESC">
+		<field name="dlid" type="text" default="" size="30"
+			label="CONFIG_DOWNLOADID_LABEL"
+			description ="CONFIG_DOWNLOADID_DESC" />
+	</fieldset>
+	
+	<fieldset name="bannedPage" label="CONFIG_BANNED_PAGE_HEADER" description="CONFIG_BANNED_PAGE_HEADER_DESC">
+		<field
+			name="customBannedMessage"
+			type="textarea"
+			default=""
+			rows="7"
+			cols="90"
+			label="CONFIG_CUSTOM_BANNED_MESSAGE_LABEL"
+			description="CONFIG_CUSTOM_BANNED_MESSAGE_DESC"
+		/>
+	</fieldset>
+	
+</config>

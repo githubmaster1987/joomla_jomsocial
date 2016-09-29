@@ -1,0 +1,133 @@
+
+.joms-calendar {
+  cursor: default;
+  width: 100%;
+  height: auto;
+}
+
+
+.joms-calendar .joms-calendar__pad { padding: 4px; }
+
+.joms-calendar__grid {
+  height: inherit;
+}
+
+.joms-calendar--day {
+  width: 14.285%;
+  float: left;
+  text-align: center;
+}
+
+.joms-calendar--day-previous-month {
+  width: 14.285%;
+  height: 13%;
+  float: left;
+  text-align: center;
+  color: gray;
+}
+
+.joms-calendar--day-next-month {
+  width: 14.285%;
+  height: 13%;
+  float: left;
+  text-align: center;
+  color: gray;
+}
+
+
+.joms-calendar--week-day {
+  width: 14.285%;
+  /*background-color: rgb(145, 172, 203);*/
+  color: white;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 1%;
+}
+
+.joms-calendar--next {
+  width: 12.5%;
+  height: 12%;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.joms-calendar--prev {
+  width: 12.5%;
+  height: 12%;
+  padding: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.joms-calendar--month {
+  width: 75%;
+  height: 12%;
+  text-align: center;
+}
+
+.c-nav-btn-over {
+  font-weight: bold;
+}
+
+.joms-calendar--today {
+
+}
+
+.joms-calendar__event {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.joms-calendar__grid {
+
+}
+
+.joms-event__grid {
+  height: inherit;
+}
+
+.joms-calendar__grid-title {
+  font-weight: bold;
+  float: left;
+  /* background-color: rgb(112, 145, 183); */
+  color: white;
+}
+
+.joms-calendar__event-title {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 14px;
+}
+
+.joms-event__body {
+
+}
+
+.joms-calendar__event-list {
+  overflow: auto;
+  height: 95%;
+}
+
+.joms-calendar__event-item > .title {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+
+.joms-calendar__event-item > .description {
+  text-overflow: ellipsis;
+  width: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.joms-calendar__event-item {
+  padding:8px;
+}
+
+.joms-calendar__event-over > .description { font-weight: normal; }

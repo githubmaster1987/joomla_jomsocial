@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_DMCCONTENTSNIFFER_TITLE</name>
+	<author>Dean Marshall Consultancy Ltd</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>Copyright (C) 2013 - 2016 Dean Marshall Consultancy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>software@deanmarshall.co.uk</authorEmail>
+	<authorUrl>www.webdevelopmentconsultancy.com</authorUrl>
+	<version>1.4.0</version>
+	<description>PLG_DMCCONTENTSNIFFER_DESC</description>
+	
+	<files>
+		<filename plugin="dmccontentsniffer">dmccontentsniffer.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages folder="lang">
+		<language tag="en-GB">en-GB/en-GB.plg_system_dmccontentsniffer.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_dmccontentsniffer.sys.ini</language>
+	</languages>
+	
+</extension>

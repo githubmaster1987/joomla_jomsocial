@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.4" method="upgrade">
+	<name>DMC Firewall</name>
+	<creationDate>April 2016</creationDate>
+	<author>Dean Marshall Consultancy Ltd</author>
+	<authorEmail>software@deanmarshall.co.uk</authorEmail>
+	<authorUrl>http://www.webdevelopmentconsultancy.com/</authorUrl>
+	<copyright>Copyright (C) 2013 - 2016 Dean Marshall Consultancy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<version>1.4.2</version>
+	<description>DMC Firewall - Extended security for your Joomla powered website.</description>
+	
+	<!-- SQL query files to execute on installation -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysql">sql/install/mysql/install.sql</file>
+			<file driver="mysqli" charset="utf8">sql/install/mysql/install.sql</file>
+			<file driver="mysqli">sql/install/mysql/install.sql</file>
+		</sql>
+	</install>
+	
+	<!-- SQL query files to execute on uninstallation -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysql">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysqli" charset="utf8">sql/install/mysql/uninstall.sql</file>
+			<file driver="mysqli">sql/install/mysql/uninstall.sql</file>
+		</sql>
+	</uninstall>
+	
+	<!-- SQL files to run on update -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/update/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<media destination="com_dmcfirewall" folder="media">
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<filename>index.html</filename>
+	</media>
+	
+	<administration>
+		<menu view="cpanel"
+			img="../media/com_dmcfirewall/images/dmc-firewall-16.png">COM_DMCFIREWALL_MENU</menu>
+
+		<files folder="admin">
+		<!-- Folders -->
+			<folder>assets</folder>
+			<folder>backups</folder>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>logs</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>views</folder>
+		
+		<!-- Files -->
+			<filename>CHANGELOG.php</filename>
+			<filename>config.xml</filename>
+			<filename>dispatcher.php</filename>
+			<filename>dmcfirewall.php</filename>
+			<filename>index.html</filename>
+			<filename>toolbar.php</filename>
+			<filename>version.php</filename>
+		</files>
+
+		<languages folder="language">
+			<language tag="en-GB">en-GB/en-GB.com_dmcfirewall.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_dmcfirewall.sys.ini</language>
+		</languages>
+	</administration>
+
+	<!-- Installation / uninstallation script file -->
+	<scriptfile>script.dmcfirewall.php</scriptfile>
+	
+	<updateservers>
+    	<server type="extension" priority="1" name="DMC Firewall Professional"><![CDATA[http://www.webdevelopmentconsultancy.com/index.php?option=com_ars&view=update&task=stream&format=xml&id=1&dlid=&dummy=extension.xml]]></server>
+	</updateservers>
+	
+</extension>

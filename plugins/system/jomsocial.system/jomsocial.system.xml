@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>System - JomSocial System</name>
+	<author>JomSocial Team</author>
+	<creationDate>July 2011</creationDate>
+	<copyright>Copyright 2008 - 2010 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://www.jomsocial.com</authorUrl>
+	<version>4.2.4</version>
+	<description><![CDATA[
+		Ajax System for Joomla, JomSocial.com
+	]]></description>
+	<files>
+		<filename plugin="jomsocial.system">jomsocial.system.php</filename>
+		<folder>pc_includes</folder>
+	</files>
+	<params>
+		<param name="compress" type="list" default="1" label="Compress JavaScript" description="Do you want to compress the JavaScript?. Reduce bandwidth use by half.">
+			<option value="1">Yes</option>
+			<option value="0">No</option>
+		</param>
+	</params>
+</extension>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.4" client="administrator" method="upgrade">
+	<name>MOD_FIREWALLSTATS</name>
+	<author>Dean Marshall Consultancy Ltd</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>Copyright (C) 2013 - 2016 Dean Marshall Consultancy Ltd. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>software@deanmarshall.co.uk</authorEmail>
+	<authorUrl>www.webdevelopmentconsultancy.com</authorUrl>
+	<version>1.4.0</version>
+	<description>MOD_FIREWALLSTATS_DESCRIPTION</description>
+	<files>
+		<folder>css</folder>
+		<filename module="mod_firewallstats">mod_firewallstats.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<languages folder="lang">
+		<language tag="en-GB">en-GB/en-GB.mod_firewallstats.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_firewallstats.sys.ini</language>
+	</languages>
+</extension>

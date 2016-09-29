@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+    <name>JS Top Members</name>
+    <author>iJoomla</author>
+    <creationDate>June 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.2.4</version>
+    <description>Top Members module for JomSocial</description>
+    <files>
+        <filename module="mod_community_topmembers">mod_community_topmembers.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_community_topmembers.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+    </files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_topmembers.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="sort_by" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_TOPMEMBERS_SORTBY_SETTINGS" description="MOD_COMMUNITY_TOPMEMBERS_SORTBY_SETTINGS">
+                    <option value="0">MOD_COMMUNITY_TOPMEMBERS_USERPOINTS_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_TOPMEMBERS_PROFILELIKES_OPTION</option>
+                    <option value="2">MOD_COMMUNITY_TOPMEMBERS_PROFILEVIEWS_OPTION</option>
+                </field>
+                <field name="timespan" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_TOPMEMBERS_TIMESPAN_SETTINGS" description="MOD_COMMUNITY_TOPMEMBERS_TIMESPAN_SETTINGS">
+                    <option value="0">MOD_COMMUNITY_TOPMEMBERS_ALLTIME_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_TOPMEMBERS_CUSTOMDAYS_OPTION</option>
+                </field>
+                <field name="custom_days" type="text" class="btn-group btn-group-yesno" default="7" label="MOD_COMMUNITY_TOPMEMBERS_CUSTOM_DAYS_SETTINGS" description="MOD_COMMUNITY_TOPMEMBERS_CUSTOM_DAYS_SETTINGS"/>
+                <field name="limit" type="text" class="btn-group btn-group-yesno" default="10" label="MOD_COMMUNITY_TOPMEMBERS_LIMIT_SETTINGS" description="MOD_COMMUNITY_TOPMEMBERS_LIMIT_SETTINGS"/>
+
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

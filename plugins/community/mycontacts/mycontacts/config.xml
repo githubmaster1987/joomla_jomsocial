@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="community">
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <params>
+        	<param name="home_address" type="text" default="" label="PLG_MYCONTACTS_HOME_ADDRESS" description="PLG_MYCONTACTS_HOME_ADDRESS" />
+                <param name="city" type="text" default="" label="PLG_MYCONTACTS_CITY" description="PLG_MYCONTACTS_CITY" />
+                <param name="postal_code" type="text" default="" label="PLG_MYCONTACTS_POSTAL_CODE" description="PLG_MYCONTACTS_POSTAL_CODE" />
+                <param name="country" type="text" default="" label="PLG_MYCONTACTS_COUNTRY" description="PLG_MYCONTACTS_COUNTRY" />
+                <param name="phone_number" type="text" default="" label="PLG_MYCONTACTS_PHONE_NUMBER" description="PLG_MYCONTACTS_PHONE_NUMBER" />
+                <param name="mobile_number" type="text" default="" label="PLG_MYCONTACTS_MOBILE_NUMBER" description="PLG_MYCONTACTS_MOBILE_NUMBER" />
+                <param name="fax_number" type="text" default="" label="PLG_MYCONTACTS_FAX_NUMBER" description="PLG_MYCONTACTS_FAX_NUMBER" />
+                <param name="my_company" type="text" default="" label="PLG_MYCONTACTS_MY_COMPANY" description="PLG_MYCONTACTS_MY_COMPANY" />
+                <param name="work_address" type="text" default="" label="PLG_MYCONTACTS_COMP_WEBSITE" description="PLG_MYCONTACTS_COMP_WEBSITE" />
+                <param name="website" type="text" default="" label="PLG_MYCONTACTS_WEBSITE" description="PLG_MYCONTACTS_WEBSITE" />
+                <param name="department" type="text" default="" label="PLG_MYCONTACTS_DEPARTMENT" description="PLG_MYCONTACTS_DEPARTMENT" />
+                <param name="job_title" type="text" default="" label="PLG_MYCONTACTS_JOB_TITLE" description="PLG_MYCONTACTS_JOB_TITLE" />
+                <param name="main_im_id" type="text" default="" label="PLG_MYCONTACTS_MAIN_IM_ID" description="PLG_MYCONTACTS_MAIN_IM_ID" />
+                <param name="skype" type="text" default="" label="PLG_MYCONTACTS_SKYPE" description="PLG_MYCONTACTS_SKYPE" />
+                <param name="icq" type="text" default="" label="PLG_MYCONTACTS_ICQ" description="PLG_MYCONTACTS_ICQ" />
+                <param name="yim" type="text" default="" label="PLG_MYCONTACTS_YIM" description="PLG_MYCONTACTS_YIM" />
+        </params>
+</extension>

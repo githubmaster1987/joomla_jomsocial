@@ -1,0 +1,109 @@
+.alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #c09853;
+}
+.alert h4 {
+	margin: 0;
+}
+.alert .close {
+	position: relative;
+	top: -2px;
+	right: -21px;
+	line-height: 18px;
+}
+.alert-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+}
+.alert-danger,
+.alert-error {
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+}
+.alert-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #3a87ad;
+}
+.alert-block {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+	margin-bottom: 0;
+}
+.alert-block p + p {
+	margin-top: 5px;
+}
+
+table.firewall-summary td { padding:4px; }
+table.firewall-summary tr { border:1px solid #ccc; }
+table.firewall-summary { width:100%; margin:10px 0; border:1px solid #ccc; }
+table.firewall-summary tr:nth-child(2n+1) {
+	background: #EDEDED;
+}
+
+.alert { margin:3px 0 !important; }
+/*
+div.icon { display: inline-block; margin-right: 10px; }
+div.icon span { display:block; }
+div.icon a {
+    background-color: white;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1) inset, 5px 5px 10px rgba(0, 0, 0, 0.05) inset;
+    color: #565656;
+    display: block;
+    text-align:center;
+    height: 97px;
+    padding: 7px 5px 5px;
+    text-decoration: none;
+    transition-property: none;
+    vertical-align: middle;
+    width: 108px;
+}
+
+
+ * New icon set
+.icon span.icon { font-size:36px; height:32px; margin:5px auto 10px; width:32px; }
+.fa { display:inline-block; font-family:FontAwesome; font-style:normal; font-weight:normal; line-height:1; }
+ */
+
+.icon {
+    border:1px solid #ccc;
+	border-radius:5px;
+	text-align:center;
+}
+.icon:hover {
+	background-color:#EEEEEE;
+}
+.icon a:hover, .icon a {
+	text-decoration:none;
+	color: #565656;
+	display: block;
+	padding: 10px;
+}
+.row-fluid [class*="span"] .icon {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.icon .fa {
+	color:#565656;
+	font-size: 36px;
+}
+.row-fluid .icon.span2 {
+    min-height: 100px !important;
+	width: 145px;
+	float: left;
+}

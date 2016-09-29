@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+    <name>JS Statistics</name>
+    <author>iJoomla</author>
+    <creationDate>June 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.2.4</version>
+    <description>Statistics module for JomSocial</description>
+    <files>
+        <filename module="mod_community_statistics">mod_community_statistics.php</filename>
+        <filename>helper.php</filename>
+        <filename>index.html</filename>
+        <filename>mod_community_statistics.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>models/fields/jsgender.php</filename>
+        <filename>style.css</filename>
+    </files>
+    <config>
+        <fields name="params" addfieldpath="/modules/mod_community_statistics/models/fields">
+            <fieldset name="basic">
+                <field name="show_groups" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_GROUPS_SETTINGS" description="MOD_STATISTIC_TOTAL_GROUPS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_discussions" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_DISCUSSIONS_SETTINGS" description="MOD_STATISTIC_TOTAL_DISCUSSIONS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_announcements" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_ANNOUNCEMENTS_SETTINGS" description="MOD_STATISTIC_TOTAL_ANNOUNCEMENTS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_upcoming_events" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_UPCOMING_EVENTS_SETTINGS" description="MOD_STATISTIC_TOTAL_UPCOMING_EVENTS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_albums" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_ALBUMS_SETTINGS" description="MOD_STATISTIC_TOTAL_ALBUMS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_photos" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_PHOTOS_SETTINGS" description="MOD_STATISTIC_TOTAL_PHOTOS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_videos" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_VIDEOS_SETTINGS" description="MOD_STATISTIC_TOTAL_VIDEOS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_activities" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_ACTIVITES_SETTINGS" description="MOD_STATISTIC_TOTAL_ACTIVITES_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_walls" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_WALL_SETTINGS" description="MOD_STATISTIC_TOTAL_WALL_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_members" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_MEMBERS_SETTINGS" description="MOD_STATISTIC_TOTAL_MEMBERS_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_males" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_MALES_SETTINGS" description="MOD_STATISTIC_TOTAL_MALES_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_females" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_FEMALES_SETTINGS" description="MOD_STATISTIC_TOTAL_FEMALES_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="show_unspecified" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_STATISTIC_TOTAL_UNSPECIFIED_SETTINGS" description="MOD_STATISTIC_TOTAL_UNSPECIFIED_SETTINGS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="jsgender" type="jsgender" label="MOD_COMMUNITY_STATISTIC_GENDERFIELD_SETTINGS"
+                       description="MOD_COMMUNITY_STATISTIC_GENDERFIELD_DESC"
+                       required="true" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_statistics.ini</language>
+    </languages>
+</extension>

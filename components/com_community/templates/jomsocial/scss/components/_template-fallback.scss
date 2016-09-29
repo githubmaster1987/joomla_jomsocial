@@ -1,0 +1,83 @@
+// Beez-20 , Default Template of Joomla 2.5
+#main .on-beez_20 {
+
+    ul {
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        li {
+            line-height: inherit;
+        }
+    }
+
+    .joms-focus__link > li {
+        padding: ms(-1) ms();
+    }
+
+    .joms-postbox .joms-postbox-tab li {
+        padding: ms(-2) ms(-1);
+    }
+
+    .joms-focus__title h2 {
+        color:white;
+    }
+
+    .joms-subnav--desktop > ul > li,
+    .joms-toolbar--desktop > ul > li {
+        padding:ms(-1);
+    }
+
+    .joms-list--friend .joms-list__item {
+        padding: 14px;
+        @include media('medium') {
+            padding: 14px 14px 36px 14px;
+        }
+    }
+
+    .joms-list--inline li,
+    .joms-list--alphabet li {
+        display: inline;
+
+        @if ($scss-direction == rtl) {
+            margin-left: ms(1);
+        } @else {
+            margin-right: ms(1);
+        }
+
+        &:last-child {
+            @if ($scss-direction == rtl) {
+                margin-left: 0;
+            } @else {
+                margin-right: 0;
+            }
+        }
+
+        &.active {
+            font-weight: bold;
+        }
+
+        @include media('small') {
+            display: block;
+            margin: ms(-2) 0;
+        }
+    }
+
+    .joms-dropdown > li,
+    .joms-popover > li {
+        padding: ms(-1);
+    }
+
+
+    #joms-app--aboutme-special .joms-list__row,
+    #joms-event--details .joms-list__row,
+    #joms-group--details .joms-list__row {
+        padding: ms(-1);
+    }
+
+
+    .joms-list--photos .joms-list__item {
+        padding: 2px;
+
+    }
+
+}

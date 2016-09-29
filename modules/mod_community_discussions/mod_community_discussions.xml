@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JS Discussions</name>
+	<author>iJoomla</author>
+	<creationDate>June 2015</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.2.4</version>
+	<description>Discussions module for JomSocial</description>
+	<files>
+		<filename module="mod_community_discussions">mod_community_discussions.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_community_discussions.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>models/fields/jsgroup.php</filename>
+	</files>
+	<config>
+		<fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_community_discussions/models/fields">
+                <field name="displaysetting" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_DISCUSSIONS_TYPE_SETTINGS" description="MOD_COMMUNITY_DISCUSSIONS_TYPE_DESC">
+                    <option value="0">MOD_COMMUNITY_DISCUSSIONS_LATEST_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_DISCUSSIONS_MY_DISC_OPTION</option>
+                    <option value="2">MOD_COMMUNITY_DISCUSSIONS_GROUP_OPTION</option>
+                </field>
+                <field name="show_private_discussion" type="radio" class="btn-group btn-group-yesno" default="1" label="MOD_COMMUNITY_DISCUSSIONS_SHOW_PRIVATE" description="MOD_COMMUNITY_DISCUSSIONS_SHOW_PRIVATE_TIPS">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+                <field name="jsgroup" type="jsgroup" label="MOD_COMMUNITY_DISCUSSIONS_GROUPID_SETTINGS"
+                       description="MOD_COMMUNITY_DISCUSSIONS_GROUPID_SETTINGS"
+                       required="false" multiple="true" />
+                <field name="show_avatar" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_DISCUSSIONS_SHOWAVATAR_SETTINGS" description="MOD_COMMUNITY_DISCUSSIONS_SHOWAVATAR_SETTINGS">
+                    <option value="0">MOD_COMMUNITY_DISCUSSIONS_NONE_OPTION</option>
+                    <option value="1">MOD_COMMUNITY_DISCUSSIONS_USERAVATAR_OPTION</option>
+                    <option value="2">MOD_COMMUNITY_DISCUSSIONS_GROUP_OPTION</option>
+                </field>
+                <field name="limit" type="text" default="10" label="MOD_COMMUNITY_DISCUSSIONS_LIMIT_SETTINGS" description="MOD_COMMUNITY_DISCUSSIONS_LIMIT_SETTINGS" />
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_discussions.ini</language>
+    </languages>
+</extension>

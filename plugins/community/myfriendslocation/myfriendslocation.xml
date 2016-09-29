@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="community" method="upgrade">
+	<name>PLG_FRIENDSLOCATION_TITLE</name>
+    <author>iJoomla</author>
+    <creationDate>July 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.2.4</version>
+    <isapplication>true</isapplication>
+	<description>PLG_FRIENDSLOCATION_XML_DESCRIPTION</description>
+	<languages >
+	    <language tag="en-GB">en-GB.plg_community_myfriendslocation.ini</language>
+		<language tag="en-GB">en-GB.plg_community_myfriendslocation.sys.ini</language>
+	</languages>
+	<files>
+		<file plugin="myfriendslocation">myfriendslocation.php</file>
+		<folder>myfriendslocation</folder>
+        <filename>models/fields/jsfieldcode.php</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/plugins/community/myfriendslocation/models/fields">
+			<fieldset name="basic">
+                <field name="title_override" type="text" default="" label="PLG_COMMUNITY_TITLE_SETTINGS" description="PLG_COMMUNITY_TITLE_DESC" />
+                <field name="favicon" type="media" default="" label="PLG_COMMUNITY_FAVICON_SETTINGS" description="PLG_COMMUNITY_FAVICON_DESC"/>
+                <field name="desc_override" type="textarea" default="" label="PLG_COMMUNITY_DESCRIPTIONS_SETTINGS" description="PLG_COMMUNITY_DESCRIPTIONS_DESC" />
+                <field name="count" type="text" default="10" label="PLG_COMMUNITY_COUNT_SETTINGS" description="PLG_COMMUNITY_COUNT_DESC" />
+                <field name="coreapp" class="btn-group btn-group-yesno" type="radio" default="0" label="PLG_COMMUNITY_COREAPP_SETTINGS" description="PLG_COMMUNITY_COREAPP_DESC">
+                    <option value="0">PLG_COMMUNITY_NO</option>
+                    <option value="1">PLG_COMMUNITY_YES</option>
+                </field>
+                <field name="position" type="list" default="content" label="PLG_COMMINITY_POSITION_SETTINGS" description="PLG_COMMINITY_POSITION_DESC">
+                    <option value="content">Main content</option>
+                    <option value="sidebar-top">Sidebar Top Tabbed</option>
+                    <option value="sidebar-top-stacked">Sidebar Top Stacked</option>
+                    <option value="sidebar-bottom">Sidebar Bottom Tabbed</option>
+                    <option value="sidebar-bottom-stacked">Sidebar Bottom Stacked</option>
+                </field>
+                <field name="hide_empty" class="btn-group btn-group-yesno" type="radio" default="0" label="PLG_COMMUNITY_HIDE_EMPTY_SETTINGS" description="PLG_COMMUNITY_HIDE_EMPTY_DESC">
+                    <option value="0">PLG_COMMUNITY_NO</option>
+                    <option value="1">PLG_COMMUNITY_YES</option>
+                </field>
+                <field name="address_field_code" type="jsfieldcode" default="0" label="PLG_COMMUNITY_MYFRIENDSLOCATION_ADDRESS_SETTINGS"/>
+                <field name="town_field_code" type="jsfieldcode" default="0" label="PLG_COMMUNITY_MYFRIENDSLOCATION_TOWN_SETTINGS"/>
+                <field name="zip_field_code" type="jsfieldcode" default="0" label="PLG_COMMUNITY_MYFRIENDSLOCATION_ZIP_SETTINGS"/>
+                <field name="state_field_code" type="jsfieldcode" default="0" label="PLG_COMMUNITY_MYFRIENDSLOCATION_STATE_SETTINGS"/>
+                <field name="country_field_code" type="jsfieldcode" default="0" label="PLG_COMMUNITY_MYFRIENDSLOCATION_COUNTRY_SETTINGS"/>
+            </fieldset>
+		</fields>
+	</config>
+</extension>

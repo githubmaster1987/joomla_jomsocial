@@ -1,0 +1,26 @@
+.joms-cover--thumbnail {
+
+    @include ratio-box($fifth);
+
+    @include media('medium') {
+        @include ratio-box($major-eleventh);
+    }
+    background: rgba(0,0,0,0.04);
+    .joms-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        height: 24px;
+        width: 24px;
+        fill: color-contrast($scss-color-secondary-background);
+    }
+
+}
+
+.joms-list__cover--wrapper {
+    @include media('medium') {
+        @include ratio-box($fifth);
+    }
+}

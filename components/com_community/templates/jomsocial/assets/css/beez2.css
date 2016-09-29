@@ -1,0 +1,36 @@
+#main .on-beez_20 ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  #main .on-beez_20 ul li {
+    line-height: inherit; }
+  #main .on-beez_20 .joms-focus__link > li {
+    padding: 8.65248px 14px; }
+  #main .on-beez_20 .joms-postbox .joms-postbox-tab li {
+    padding: 5.34752px 8.65248px; }
+  #main .on-beez_20 .joms-focus__title h2 {
+    color: white; }
+  #main .on-beez_20 .joms-subnav--desktop > ul > li, #main .on-beez_20 .joms-toolbar--desktop > ul > li {
+    padding: 8.65248px; }
+  #main .on-beez_20 .joms-list--friend .joms-list__item {
+    padding: 14px; }
+  @media only screen and (min-width: 481px) {
+    #main .on-beez_20 .joms-list--friend .joms-list__item {
+      padding: 14px 14px 36px 14px; } }
+  #main .on-beez_20 .joms-list--inline li, #main .on-beez_20 .joms-list--alphabet li {
+    display: inline;
+    margin-right: 22.65248px; }
+  #main .on-beez_20 .joms-list--inline li:last-child, #main .on-beez_20 .joms-list--alphabet li:last-child {
+    margin-right: 0; }
+  #main .on-beez_20 .joms-list--inline li.active, #main .on-beez_20 .joms-list--alphabet li.active {
+    font-weight: bold; }
+  @media only screen and (max-width: 480px) {
+    #main .on-beez_20 .joms-list--inline li, #main .on-beez_20 .joms-list--alphabet li {
+      display: block;
+      margin: 0.61803 0; } }
+  #main .on-beez_20 .joms-dropdown > li, #main .on-beez_20 .joms-popover > li, #main .on-beez_20 .joms-popover > li {
+    padding: 8.65248px; }
+  #main .on-beez_20 #joms-app--aboutme-special .joms-list__row, #main .on-beez_20 #joms-event--details .joms-list__row, #main .on-beez_20 #joms-group--details .joms-list__row {
+    padding: 8.65248px; }
+  #main .on-beez_20 .joms-list--photos .joms-list__item {
+    padding: 2px; }

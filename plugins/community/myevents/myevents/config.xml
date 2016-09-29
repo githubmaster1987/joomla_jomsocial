@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="community">
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<params>
+		<param name="count" type="text" default="12" size="3" label="PLG_TOTAL_DISPLAYED" description="PLG_TOTAL_DISPLAYED_DESC" />
+	</params>
+</extension>

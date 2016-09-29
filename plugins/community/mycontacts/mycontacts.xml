@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="community" method="upgrade">
+	<name>PLG_MYCONTACTS_TITLE</name>
+    <author>iJoomla</author>
+    <creationDate>July 2015</creationDate>
+    <copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>support@jomsocial.com</authorEmail>
+    <authorUrl>http://jomsocial.com</authorUrl>
+    <version>4.2.4</version>
+	<isapplication>true</isapplication>
+	<description>PLG_MYCONTACTS_XML_DESCRIPTION</description>
+	<languages >
+	    <language tag="en-GB">en-GB.plg_community_mycontacts.ini</language>
+		<language tag="en-GB">en-GB.plg_community_mycontacts.sys.ini</language>
+	</languages>
+	<files>
+		<file plugin="mycontacts">mycontacts.php</file>
+		<folder>mycontacts</folder>
+
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+                <field name="title_override" type="text" default="" label="PLG_COMMUNITY_TITLE_SETTINGS" description="PLG_COMMUNITY_TITLE_DESC" />
+                <field name="favicon" type="media" default="" label="PLG_COMMUNITY_FAVICON_SETTINGS" description="PLG_COMMUNITY_FAVICON_DESC"/>
+                <field name="desc_override" type="textarea" default="" label="PLG_COMMUNITY_DESCRIPTIONS_SETTINGS" description="PLG_COMMUNITY_DESCRIPTIONS_DESC" />
+                <field name="coreapp" class="btn-group btn-group-yesno" type="radio" default="0" label="PLG_COMMUNITY_COREAPP_SETTINGS" description="PLG_COMMUNITY_COREAPP_DESC">
+                    <option value="0">PLG_COMMUNITY_NO</option>
+                    <option value="1">PLG_COMMUNITY_YES</option>
+                </field>
+                <field name="position" type="list" default="content" label="PLG_COMMINITY_POSITION_SETTINGS" description="PLG_COMMINITY_POSITION_DESC">
+                    <option value="content">Main content</option>
+                    <option value="sidebar-top">Sidebar Top Tabbed</option>
+                    <option value="sidebar-top-stacked">Sidebar Top Stacked</option>
+                    <option value="sidebar-bottom">Sidebar Bottom Tabbed</option>
+                    <option value="sidebar-bottom-stacked">Sidebar Bottom Stacked</option>
+                </field>
+                <field name="hide_empty" class="btn-group btn-group-yesno" type="radio" default="0" label="PLG_COMMUNITY_HIDE_EMPTY_SETTINGS" description="PLG_COMMUNITY_HIDE_EMPTY_DESC">
+                    <option value="0">PLG_COMMUNITY_NO</option>
+                    <option value="1">PLG_COMMUNITY_YES</option>
+                </field>
+                <field name="hide_empty_fields" class="btn-group btn-group-yesno" type="radio" default="0" label="PLG_COMMUNITY_HIDE_EMPTY_FIELDS_SETTINGS" description="PLG_COMMUNITY_HIDE_EMPTY_FIELDS_DESC">
+                    <option value="0">PLG_COMMUNITY_NO</option>
+                    <option value="1">PLG_COMMUNITY_YES</option>
+                </field>
+				<field name="home_address" type="list" default="0" label="Home Adress" description="Show home address.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="city" type="list" default="0" label="City" description="Show city.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="postal_code" type="list" default="0" label="Postal Code" description="Show postal code.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="country" type="list" default="0" label="Country" description="Show country.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="phone_number" type="list" default="0" label="Phone Number" description="Show phone number.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="mobile_number" type="list" default="0" label="Mobile Number" description="Show mobile number.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="fax_number" type="list" default="0" label="Fax Number" description="Show fax number.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="website" type="list" default="0" label="Website" description="Show Website.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="my_company" type="list" default="0" label="My Company" description="Show my company.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="work_address" type="list" default="0" label="Work Address" description="Show work address.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="comp_website" type="list" default="0" label="Company's Website" description="Show company's website.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="department" type="list" default="0" label="Department" description="Show department.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="job_title" type="list" default="0" label="Job Title" description="Show job title.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="main_im_id" type="list" default="0" label="Main IM ID" description="Show Main IM ID.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="im_list" type="list" default="0" label="IM list" description="Show IM List.">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

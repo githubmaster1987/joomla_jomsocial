@@ -1,0 +1,144 @@
+.joms-tab__bar {
+    display: table;
+    table-layout: fixed;
+    width:100%;
+    background: $scss-color-moduletab-background;
+
+    > a {
+        display:table-cell;
+        text-align:center;
+        text-decoration:none;
+        padding:ms(-1);
+        font-size: 12px;
+        color: color-contrast($scss-color-moduletab-background);
+        position: relative;
+        &.active {
+            font-weight:bold;
+            background: $scss-color-module-background;
+            color: color-contrast($scss-color-module-background);
+            &:hover {
+                color: color-contrast($scss-color-module-background);
+            }
+        }
+        &:focus,
+        &:hover {
+            color: lighten(color-contrast($scss-color-moduletab-background),8%);
+            text-decoration: none;
+        }
+        &.no-padding {
+            padding:0;
+        }
+    }
+
+    .joms-module__wrapper--main & {
+        margin-bottom: ms();
+        > a {
+            &.active {
+                @extend %arrow--top;
+                &:before,
+                &:after {
+                    bottom:0;
+                }
+                &:after {
+                    border-bottom-color: $scss-color-background;
+                    border-width: 8px;
+                    margin-left: -8px;
+                }
+
+                &:before {
+                    border-bottom-color: transparent;
+                }
+            }
+        }
+    }
+
+    .joms-page > & {
+        border: 1px solid $scss-color-border;
+    }
+
+    .joms-tab__bar--button {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        span {
+            display: table-cell;
+            padding: ms(-2);
+        }
+        span.add {
+            width: 26px;
+            background: darken($scss-color-moduletab-background,4%);
+            &:hover {
+                background: $scss-color-module-background;
+            }
+        }
+    }
+
+}
+
+.joms-tab__content {
+    padding: ms();
+
+    .joms-module__wrapper--main &,
+    .joms-middlezone & {
+        padding: 0;
+        background: transparent;
+    }
+
+    .joms-middlezone & {
+        margin-bottom: ms();
+    }
+
+    .joms-module__wrapper &,
+    .joms-module__wrapper--stacked &, {
+        background: $scss-color-module-background;
+    }
+
+    .joms-page > & {
+        padding: ms() 0;
+    }
+
+    .joms-list__row li ol {
+        list-style-position: inside;
+        list-style-type: decimal;
+        margin-left: 25px;
+        padding: 5px 0;
+    }
+
+    .joms-list__row li ul {
+        list-style-position: inside;
+        list-style-type: disc;
+        margin-left: 25px;
+        padding: 5px 0;
+    }
+}
+
+.joms-tab__app {
+    padding: ms();
+    background: $scss-color-module-background;
+    .joms-sidebar & {
+        padding: 0;
+        background: transparent;
+    }
+}
+
+.joms-sidebar {
+    .joms-tab__content {
+
+        .joms-comment__header {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .joms-stream__header {
+            padding: ms(-2) 0;
+        }
+        .joms-comment {
+            background-color: transparent;
+        }
+
+        .joms-comment__item {
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+}

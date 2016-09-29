@@ -1,0 +1,3 @@
+[26-Sep-2016 08:30:00 Asia/Kolkata] PHP Strict Standards:  Only variables should be assigned by reference in /home/readychi/public_html/site9/administrator/components/com_community/installer.updater.php on line 96
+[26-Sep-2016 08:30:00 Asia/Kolkata] PHP Strict Standards:  Only variables should be assigned by reference in /home/readychi/public_html/site9/administrator/components/com_community/installer.updater.php on line 113
+[26-Sep-2016 22:01:24 Asia/Kolkata] PHP Strict Standards:  Only variables should be passed by reference in /home/readychi/public_html/site9/administrator/components/com_profiles/filemanager/controller/xhrfolders.php on line 163

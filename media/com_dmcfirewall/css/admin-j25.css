@@ -1,0 +1,46 @@
+/**
+ *	@Package DMC Firewall
+ *	@Copyright Dean Marshall Consultancy Ltd
+ *	Email software@deanmarshall.co.uk
+ *	web: http://www.deanmarshall.co.uk/
+ *	web: http://www.webdevelopmentconsultancy.com/
+ */
+
+.list-striped, .row-striped {
+    border-top: 1px solid #DDDDDD;
+    line-height: 18px;
+    list-style: none outside none;
+    margin-left: 0;
+    text-align: left;
+    vertical-align: middle;
+}
+.list-striped li:nth-child(2n+1), .list-striped dd:nth-child(2n+1), .row-striped .row:nth-child(2n+1), .row-striped .row-fluid:nth-child(2n+1) {
+    background-color: #F9F9F9;
+}
+
+.list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 8px;
+}
+
+.icon-48-dmcfirewall, .icon-48-dmc-firewall-48 {
+    background-image: url("../images/dmc-firewall-48.png");
+}
+
+/* Temp Fix */
+.akeeba-bootstrap .cpanel div.icon a, .akeeba-bootstrap #cpanel div.icon a {
+    background-color: white;
+    background-position: -30px center;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1) inset, 5px 5px 10px rgba(0, 0, 0, 0.05) inset;
+    color: #565656;
+    display: block;
+    float: left;
+    height: 97px;
+    padding: 7px 5px 21px;
+    text-decoration: none;
+    transition-property: none;
+    vertical-align: middle;
+    width: 108px;
+}

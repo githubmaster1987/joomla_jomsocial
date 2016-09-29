@@ -1,0 +1,11 @@
+{
+	"name": "jomsocial",
+	"devDependencies": {
+		"grunt": "latest",
+		"grunt-contrib-concat": "latest",
+		"grunt-contrib-jshint": "latest",
+		"grunt-contrib-requirejs": "latest",
+		"grunt-contrib-uglify": "latest",
+        "grunt-text-replace": "latest"
+	}
+}

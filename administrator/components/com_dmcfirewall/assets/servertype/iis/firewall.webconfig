@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<configuration>
+		<system.webServer>
+			<rewrite>
+				<rules>
+					<rule name="DMC_Firewall_-_banned_IP_address_get_inserted_here!">
+						<match url=".*" />
+						<conditions logicalGrouping="MatchAny">
+							<add input="{REMOTE_ADDR}" pattern="0.0.0.0" /> <!-- This is a dummy IP address so Windows doesn't fall over -->
+							<!-- DMC Firewall - web.config block delimiter -->
+						</conditions>
+						<action type="CustomResponse" statusCode="403" statusReason="Forbidden" statusDescription="Forbidden" />
+					</rule>
+					
+					<!-- DMC Firewall removed standard Joomla blocking! -->
+
+					<rule name="Joomla!_Rule_2">
+						<match url="(.*)" ignoreCase="false" />
+						<conditions logicalGrouping="MatchAll">
+							<add input="{URL}" pattern="^/index.php" ignoreCase="true" negate="true" />
+							<add input="{URL}" pattern="/component/|(/[^.]*|\.(php|html?|feed|pdf|vcf|raw))$" />
+							<add input="{REQUEST_FILENAME}" matchType="IsFile" ignoreCase="false" negate="true" />
+							<add input="{REQUEST_FILENAME}" matchType="IsDirectory" ignoreCase="false" negate="true" />
+						</conditions>
+					<action type="Rewrite" url="index.php" />
+				</rule>
+			</rules>
+		</rewrite>
+	</system.webServer>
+</configuration>

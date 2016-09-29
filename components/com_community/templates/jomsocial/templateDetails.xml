@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.5" type="template">
+	<name>Default</name>
+	<version>4.2.4</version>
+	<creationDate>Oct 2014</creationDate>
+	<author>JomSocial Team</author>
+	<authorEmail>support@azrul.com</authorEmail>
+	<authorUrl>http://www.jomsocial.com</authorUrl>
+	<copyright>Copyright 2008 - 2014 by Slashes &amp; Dots Sdn Bhd. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Default template for JomSocial</description>
+</extension>

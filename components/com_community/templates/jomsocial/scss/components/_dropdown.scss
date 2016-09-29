@@ -1,0 +1,126 @@
+.joms-dropdown {
+
+    display:none;
+    position: relative;
+    background: $scss-color-dropdown-background;
+    border: 1px solid $scss-color-dropdown-border;
+    z-index:12;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: $font-size-small;
+    @extend %box-shadow;
+
+    > li {
+        color: color-contrast($scss-color-dropdown-background);
+        padding: ms(-1);
+        &:hover, &.active {
+            background: darken($scss-color-dropdown-background,4%);
+        }
+        &.noselect {
+            background: none;
+        }
+        .joms-icon {
+            fill: color-contrast($scss-color-dropdown-background);
+        }
+
+        &.separator {
+            border-top: 1px solid $scss-color-dropdown-border;
+            padding: 0;
+        }
+
+        @if ($scss-direction==rtl) {
+            text-align: right;
+        } @else {
+            text-align: left;
+        }
+        > a {
+            display: block;
+            color: color-contrast($scss-color-dropdown-background);
+            &:hover {
+                text-decoration: none;
+                color: color-contrast($scss-color-dropdown-background);
+            }
+        }
+    }
+
+    @if $scss-color-link != false {
+        li a {
+
+            color: color-contrast($scss-color-dropdown-background);
+            &:hover {
+                color: color-contrast($scss-color-dropdown-background);
+                text-decoration: none;
+            }
+        }
+    }
+
+    .joms-toolbar--desktop & {
+        width: 140px;
+        top: 100%;
+        position: absolute;
+    }
+
+    .joms-toolbar--desktop &.joms-dropdown-r {
+        right: ms(-1);
+    }
+
+    .joms-toolbar--desktop &.joms-dropdown-t {
+        top: auto;
+        bottom: 100%;
+    }
+
+    .joms-gallery__options &,
+    .joms-list__options & {
+        top: 32px;
+
+        @if ($scss-direction==rtl) {
+            left: 0;
+        } @else {
+            right: 0;
+        }
+
+    }
+
+    .joms-gallery__options & {
+        position: relative;
+    }
+
+    .joms-list__button--dropdown & {
+        position: absolute;
+    }
+
+    &.more-button {
+        @include media('medium') {
+            margin-top: 7px;
+            position: absolute;
+            @if ($scss-direction==rtl) {
+                margin-right: -15px;
+            } @else {
+                margin-left: -15px;
+            }
+        }
+    }
+
+    @include media('large') {
+
+        .joms-focus__button--options--desktop & {
+
+            @if ($scss-direction==rtl) {
+                left: 2px;
+            } @else {
+                right: 2px;
+            }
+
+            top: ms(2);
+        }
+
+    }
+
+
+
+}
+
+.joms-dropdown--privacy {
+    position: absolute;
+}

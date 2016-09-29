@@ -1,0 +1,58 @@
+.joms-table {
+    width: 100%;
+
+    tr {
+        border-bottom: 2px solid;
+        border-color: rgba(0,0,0,0.03);
+        &:hover,
+        &:focus {
+            border-color: lighten($scss-color-primary,20%);
+        }
+
+        &.joms-table__head {
+            border-color: rgba(0,0,0,0.05);
+            .joms-table__option {
+                padding-top: ms(2);
+                padding-bottom: ms();
+            }
+        }
+
+        td {
+            padding: ms(-1) 0;
+            color: $scss-color-icon;
+            font-size: $font-size-small;
+
+            &.joms-table__title {
+                padding-top: ms(2);
+                padding-bottom: ms();
+                font-size: $scss-font-size;
+            }
+
+            &.joms-table__desc {
+                @include media('medium') {
+                    padding-left: 140px;
+                }
+            }
+        }
+    }
+
+    thead {
+        tr {
+            border-bottom: 4px solid;
+            border-color: rgba(0,0,0,0.05);
+        }
+    }
+
+    input[type="checkbox"],
+    input[type="radio"] {
+        margin: 0;
+    }
+}
+
+.joms-table__title {
+    font-weight: bold;
+}
+
+.joms-table__option {
+    text-align: center;
+}

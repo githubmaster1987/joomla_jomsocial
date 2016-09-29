@@ -1,0 +1,64 @@
+.joms-text--lead {
+    font-size: ms(1);
+    line-height: ms(1);
+    font-weight: normal;
+    color: $scss-color-icon;
+}
+
+.joms-text--small {
+    font-size: $font-size-smallest;
+    line-height: ms();
+}
+
+.joms-text--normal {
+    font-size: $scss-font-size;
+}
+
+.joms-text--light,
+.joms-text--title,
+.joms-text--bold {
+    color: $scss-color-icon;
+    font-weight: normal;
+}
+
+.joms-text--bold {
+    font-weight: bold;
+}
+
+.joms-text--title,
+.joms-text--username,
+.joms-text--desc {
+    margin: 0;
+    margin-bottom:ms();
+    word-break: break-word;
+}
+
+.joms-text--username {
+    margin-bottom: ms(-2);
+}
+
+.joms-text--desc {
+    color: $scss-color-icon;
+    font-weight: normal;
+    font-size: $font-size-small;
+}
+
+.joms-text--light {
+    #joms-app--aboutme-special & {
+        margin: 0;
+        margin-bottom: ms(-2);
+    }
+}
+
+.joms-text--break {
+    word-break: break-all;
+    word-wrap: break-word;
+
+}
+
+.joms-text--skip {
+    @include media('small') {
+        text-align: center;
+        display: block;
+    }
+}

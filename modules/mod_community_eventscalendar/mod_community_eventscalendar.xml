@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="module" client="site" method="upgrade">
+	<name>JS Events Calendar</name>
+	<author>iJoomla</author>
+	<creationDate>April 2015</creationDate>
+	<copyright>Copyright (C) 2008 - 2015 iJoomla. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>support@jomsocial.com</authorEmail>
+	<authorUrl>http://jomsocial.com</authorUrl>
+	<version>4.2.4</version>
+	<description>Events Calendar module for JomSocial</description>
+	<files>
+		<filename module="mod_community_eventscalendar">mod_community_eventscalendar.php</filename>
+        <filename>models/fields/jseventcategory.php</filename>
+        <filename>models/fields/jsgroup.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_community_eventscalendar.xml</filename>
+        <filename>tmpl/index.html</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>style.css</filename>
+        <filename>calendar.js</filename>
+	</files>
+    <languages>
+        <language tag="en-GB">en-GB.mod_community_eventscalendar.ini</language>
+        <language tag="en-GB">en-GB.mod_community_eventscalendar.sys.ini</language>
+    </languages>
+	<config>
+		<fields name="params">
+            <fieldset name="basic" addfieldpath="/modules/mod_community_eventscalendar/models/fields">
+                <field name="displaysetting" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_EVENTSCALENDAR_DISPLAY_SETTINGS_LABEL" description="MOD_COMMUNITY_EVENTSCALENDAR_DISPLAY_SETTINGS_TIPS">
+                    <option value="0">MOD_COMMUNITY_EVENTSCALENDAR_ALL_EVENTS_SETTINGS</option>
+                    <option value="1">MOD_COMMUNITY_EVENTSCALENDAR_ALL_GROUP_EVENTS_SETTINGS</option>
+                    <option value="2">MOD_COMMUNITY_EVENTSCALENDAR_SINGLE_GROUP_SETTINGS</option>
+                    <option value="3">MOD_COMMUNITY_EVENTSCALENDAR_SPECIFIC_CATEGORY_SETTINGS</option>
+                </field>
+                <field name="jsgroup" type="jsgroup" label="MOD_COMMUNITY_EVENTSCALENDAR_JSGROUP_SETTINGS_LABEL"
+                       description="MOD_COMMUNITY_EVENTSCALENDAR_JSGROUP_SETTINGS_TIPS"
+                       required="false" showon="displaysetting:2"/>
+
+                <field name="jseventcategory" type="jseventcategory" label="MOD_COMMUNITY_EVENTSCALENDAR_JSEVENTCATEGORY_SETTINGS_LABEL"
+                       description="MOD_COMMUNITY_EVENTSCALENDAR_JSEVENTCATEGORY_SETTINGS_TIPS"
+                       required="true" />
+                <field name="firstday" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_EVENTSCALENDAR_FIRSTDAY_LABEL" description="MOD_COMMUNITY_EVENTSCALENDAR_FIRSTDAY_TIPS">
+                    <option value="0">MOD_COMMUNITY_EVENTSCALENDAR_FIRSTDAY_SUNDAY</option>
+                    <option value="1">MOD_COMMUNITY_EVENTSCALENDAR_FIRSTDAY_MONDAY</option>
+                </field>
+                <field name="dateformat" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_EVENTSCALENDAR_DATE_FORMAT_LABEL" description="MOD_COMMUNITY_EVENTSCALENDAR_DATE_FORMAT_TIPS">
+                    <option value="d/m">d/m</option>
+                    <option value="d/m/Y">d/m/Y</option>
+                    <option value="m/d/Y">m/d/Y</option>
+                    <option value="Y-m-d">Y-m-d</option>
+                    <option value="F j, Y">F j, Y</option>
+                </field>
+                <field name="timeformat" type="list" class="btn-group btn-group-yesno" default="0" label="MOD_COMMUNITY_EVENTSCALENDAR_TIME_FORMAT_LABEL" description="MOD_COMMUNITY_EVENTSCALENDAR_TIME_FORMAT_TIPS">
+                    <option value="g:i A">g:i A</option>
+                    <option value="g:i a">g:i a</option>
+                    <option value="H:i">H:i</option>
+                </field>
+			</fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC"/>
+                <field
+                        name="moduleclass_sfx"
+                        type="textarea"
+                        rows="3"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                        name="cache"
+                        type="list"
+                        default="0"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC"
+                        >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+		</fields>
+	</config>
+</extension>

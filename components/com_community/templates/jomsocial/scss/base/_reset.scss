@@ -1,0 +1,66 @@
+.jomsocial {
+
+    @if ( $scss-color-text != false ) {
+        color: $scss-color-text;
+    }
+
+    @if ($scss-color-link != false ) {
+
+        a {
+            color: $scss-color-link;
+            &:hover {
+                    color: $scss-color-link;
+            }
+
+            &.liked,
+            &.liked span {
+                color: $scss-color-link;
+                &:hover {
+                        color: $scss-color-link;
+                }
+            }
+        }
+
+        button {
+            &.liked,
+            &.liked span {
+                color: $scss-color-link;
+                &:hover {
+                        color: $scss-color-link;
+                }
+            }
+        }
+
+    }
+
+    @if ( $scss-color-header != false ) {
+        h1,h2,h3,h4,h5,h6 {
+            color: $scss-color-header;
+        }
+    }
+
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+        vertical-align: top;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+}
+
+.gm-style {
+    img {
+        max-width: none;
+    }
+}

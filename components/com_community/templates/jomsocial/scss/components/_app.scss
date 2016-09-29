@@ -1,0 +1,68 @@
+.joms-app__item {
+	display: table;
+	margin-bottom: 4%;
+	padding-bottom: 2%;
+	&:last-child {
+		margin-bottom: 0;
+		padding-bottom:  0;
+	}
+
+	span {
+		display: table-cell;
+		width: 10%;
+		text-align: right;
+		vertical-align: middle;
+	}
+}
+
+.joms-app__desc {
+	display: table-cell;
+	width: 80%;
+	padding-left: ms();
+	vertical-align: middle;
+	h4 {
+		margin-top: 0;
+	}
+}
+
+.joms-app__icon {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.joms-app__block {
+    position: relative;
+    padding: ms(-1);
+    background: $scss-color-secondary-background;
+    border: 1px solid $scss-color-border;
+    margin-bottom: ms();
+    &.core {
+        background: darken($scss-color-secondary-background,6%);
+        border: 0;
+    }
+}
+
+.joms-app--wrapper {
+    background: $scss-color-secondary-background;
+    padding: ms();
+    position: relative;
+    #joms-app--feeds-special &,
+    #joms-app--aboutme-special & {
+        background: transparent;
+        padding: 0;
+    }
+}
+
+.joms-app--myarticle {
+	padding: ms();
+	background: $scss-color-secondary-background;
+
+	.joms-tab__content & {
+		padding: 0;
+		background: transparent;
+	}
+
+	> p {
+		margin-bottom: 0;
+	}
+}

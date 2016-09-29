@@ -1,0 +1,291 @@
+/* update default protostar style to improve css performance */
+.body .container {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.is-error {
+  border-color: red !important;
+}
+
+.joms-input--errormsg {
+  color: red;
+  font-size: smaller;
+  position: absolute;
+    top: 38px;
+    left: 0;
+}
+
+.joms-input--pwdstr {
+  position: absolute;
+    top: 30px;
+    right: 3px;
+    left: 3px;
+}
+
+.joms-input--pwdstr__item {
+  border-radius: 2px;
+  float: left;
+  margin: 0 0.5%;
+  width: 19%;
+    height: 5px;
+}
+
+.joms-input--pwdstr__1 {
+  background-color: red;
+}
+
+.joms-input--pwdstr__2 {
+  background-color: orange;
+}
+
+.joms-input--pwdstr__3 {
+  background-color: yellow;
+}
+
+.joms-input--pwdstr__4 {
+  background-color: #7FFF00;
+}
+
+.joms-input--pwdstr__5 {
+  background-color: green;
+}
+
+/* @todo: to accomodate empty string notification value. remove this after applied to scss file */
+.joms-notifications__label {
+    line-height: 15px !important;
+    padding: 0 3px !important;
+}
+
+/* @todo: shrinken image size. remove this after applied to scss file */
+.joms-popover__avatar img {
+    height: 48px !important;
+    width: 48px !important;
+}
+
+.joms-focus__button--options--desktop .joms-dropdown a {
+    white-space: nowrap;
+}
+
+.joms-focus__actions--reposition {
+    display: none;
+    position: absolute;
+        right: 10px;
+        bottom: 10px;
+}
+
+/** Popover. */
+.joms-popover li {
+    margin: 8px 0;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.joms-popover__actions {
+    white-space: nowrap;
+    width: 1px;
+}
+
+.joms-popover .joms-js--field,
+.joms-popover .joms-js--field input,
+.joms-popover form {
+    margin: 0;
+}
+
+.joms-popover .joms-js--loading,
+.joms-popover .joms-js--viewall {
+    display: none;
+}
+
+.joms-popover .joms-js--loading {
+    margin: 8px 0 0;
+    text-align: center;
+}
+
+.joms-progressbar {
+    background-color: #eee;
+    display: block;
+    height: 6px;
+}
+
+.joms-progressbar__progress {
+    background-color: #3498db;
+    display: block;
+    height: 6px;
+    width: 0;
+}
+
+.joms-list__item {
+    position: relative;
+}
+
+.cModule .joms-list__item {
+    position: inherit;
+}
+
+.joms-list__item:hover .joms-gallery__options {
+    display: block;
+}
+
+.joms-media__thumbnail {
+    position: relative;
+}
+
+.joms-media__thumbnail iframe {
+    width: 100%;
+}
+
+.joms-media__thumbnail .mejs-overlay-play {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.joms-focus__header__actions a.nolink
+.joms-focus__header__actions a.nolink:hover,
+.joms-focus__header__actions--desktop a.nolink,
+.joms-focus__header__actions--desktop a.nolink:hover {
+    cursor: default;
+    text-decoration: none;
+}
+
+.joms-focus__link a.liked,
+.joms-focus__link a.liked:hover {
+    color: #0088cc;
+}
+
+.joms-focus__link a.liked svg {
+    fill: #0088cc;
+}
+
+.joms-postbox-emoticon li div {
+    white-space: nowrap;
+}
+
+.joms-focus__cover {
+    overflow: visible !important;
+}
+
+.joms-focus__cover-image {
+    overflow: hidden;
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 100%;
+        height: 100%;
+}
+
+.joms-focus__cover-image img {
+    max-width: 100%;
+    position: absolute;
+        top: 0;
+        left: 0;
+}
+
+.joms-dropdown > li.divider,
+.joms-popover > li.divider {
+    background-color: #e5e5e5;
+    display: block;
+    height: 1px;
+    margin: 4px;
+    padding: 0;
+}
+
+.joms-avatar--focus,
+.joms-avatar--focus a {
+    position: relative;
+}
+
+.joms-avatar--focus svg {
+    cursor: pointer;
+    display: none;
+    fill: rgba( 0, 0, 0, .6);
+}
+
+.joms-avatar--focus:hover svg {
+    display: block;
+}
+
+@media all and ( max-width: 640px ) {
+    .joms-popup--togglecomment .joms-popup__commentwrapper .joms-popup__comment {
+        position: relative;
+    }
+}
+
+@media all and ( max-width: 480px ) {
+    .joms-popup__optoption button {
+        position: relative;
+    }
+
+    .joms-popup__optoption button span.joms-popup__btn-overlay {
+        opacity: 0;
+        display: block !important;
+        position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+    }
+}
+
+.joms-list__item--dragged {
+    border: 3px dashed #555;
+}
+
+.joms-select--multiple::after {
+    display: none;
+}
+
+.cVideo-Wrapper .joms-media--video-native {
+    position: relative;
+    width: 100%;
+}
+
+.cVideo-Wrapper .joms-media--video-native:after {
+    content: "";
+    display: block;
+    margin-top: 60%;
+}
+
+.cVideo-Wrapper .joms-media--video-native > iframe {
+    position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    width: 100%;
+        height: 100%;
+}
+
+.play-button {
+    height: 40px;
+    width: 65px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.play-button:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.play-button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 10.5px;
+    left: 24px;
+    margin: 0 auto;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 17px;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 1);
+}

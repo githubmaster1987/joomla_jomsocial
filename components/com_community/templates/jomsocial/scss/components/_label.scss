@@ -1,0 +1,13 @@
+.joms-label {
+    font-size: 10px;
+    padding: ms(-4) ms(-2);
+    display: inline-block;
+    &.is-owner {
+        background-color: $scss-color-primary;
+        color: color-contrast($scss-color-primary);
+    }
+    &.is-admin {
+        background-color: $scss-color-secondary;
+        color: color-contrast($scss-color-secondary);
+    }
+}

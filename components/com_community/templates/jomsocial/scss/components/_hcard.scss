@@ -1,0 +1,150 @@
+.joms-hcard {
+    background: $scss-color-stream-background;
+    max-width: 360px;
+    width: 100%;
+    border: 1px solid $scss-color-border;
+    position: relative;
+    @extend %box-shadow;
+
+    &.flat {
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    .joms-avatar {
+        display: table-cell;
+        width: 64px;
+        vertical-align: middle;
+    }
+
+    .joms-date {
+        @include media('medium') {
+            display: table-cell;
+        }
+    }
+
+    .joms-module--hellome & {
+        .joms-avatar {
+            width: 42px;
+
+            a {
+                margin: 0;
+                padding: 0;
+            }
+
+            img {
+                margin: 0;
+                padding: 1px;
+            }
+        }
+    }
+
+    .joms-date {
+        @include media('medium') {
+            width: 48px;
+        }
+        color: white;
+        span {
+            display: block;
+            font-weight: bold;
+
+        }
+        @if ($scss-direction==rtl) {
+            border-left:1px solid white;
+        } @else {
+            border-right:1px solid white;
+        }
+    }
+
+    *, *:before, *:after {
+        /* apply a natural box layout model to all elements */
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .joms-focus__link {
+        li {
+            padding: ms(-2) ms(-1);
+        }
+        a {
+            font-size: $font-size-smallest;
+            font-weight: normal;
+        }
+    }
+
+}
+
+.joms-hcard__cover {
+    margin-bottom: 0;
+
+    .joms-module--hellome & {
+        &:before {
+            padding-top: 39%;
+        }
+    }
+}
+
+@include media('small') {
+    .joms-hcard__cover:before {
+        padding-top: 18% !important;
+    }
+}
+
+
+.joms-hcard__info {
+    display: table;
+    width: 100%;
+    padding:ms();
+    background: rgba(0,0,0,0.3);
+    z-index: 100;
+    position: relative;
+    @include media('medium') {
+        position: absolute;
+        bottom: 0;
+    }
+    &.darken {
+        background: rgba(0,0,0,0.6);
+    }
+}
+
+.joms-hcard__body {
+    padding: ms();
+    border-top:1px solid rgba(0,0,0,0.06);
+}
+
+.joms-hcard__info-content {
+    display: table-cell;
+    padding-left: ms();
+    color: white;
+    vertical-align: middle;
+
+    h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+.joms-hcard__actions {
+    padding: ms(-1) ms();
+    background: rgba(0,0,0,0.03);
+    @if ($scss-direction==rtl) {
+        text-align:left;
+    } @else {
+
+        text-align:right;
+    }
+
+    border-top:1px solid rgba(0,0,0,0.06);
+}
+
+.joms-hcard__badges {
+    padding: 4px 2px;
+    background-color: rgba(0,0,0,0.04);
+    text-align: center;
+}
+
+.joms-hcard__title {
+    padding: ms(-1) ms();
+}

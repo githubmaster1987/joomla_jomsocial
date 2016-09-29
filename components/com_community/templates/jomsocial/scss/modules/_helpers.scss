@@ -1,0 +1,12 @@
+// Helper class made for module with top lists, like top photos etc.
+%joms-module--top {
+    margin-bottom: ms();
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .joms-stream__header {
+        margin-bottom: 0;
+    }
+}

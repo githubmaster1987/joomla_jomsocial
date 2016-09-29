@@ -1,0 +1,508 @@
+.joms-focus {
+    background:$scss-color-focus-background;
+    margin-bottom:ms();
+    position:relative;
+    text-align:center;
+    @extend %clearfix;
+
+}
+
+.joms-focus__cover,
+.joms-hcard__cover {
+
+    @if ($scss-direction == rtl) {
+        text-align:right;
+    } @else {
+        text-align:left;
+    }
+
+    
+    @include ratio-box($fifth);
+    
+
+    @include media('medium') {
+        @include ratio-box($major-eleventh);
+    }
+
+    .joms-focus__cover-image {
+        display: none;
+        @include media('medium') {
+            display: block;
+        }
+    }
+
+    .joms-focus__cover-image--mobile {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -o-background-size: cover !important;
+        background-size: cover !important;
+        @include media('medium') {
+            display: none;
+        }
+    }
+}
+
+.joms-focus--mini {
+    height: 128px;
+    overflow: hidden !important;
+
+    .joms-focus__cover-image {
+        img {
+            bottom: -80%;
+            top: auto;
+        }
+    }
+
+    .joms-focus__title {
+        a {
+            color: white;
+        }
+    }
+
+    .joms-focus__header__actions {
+        display: none;
+    }
+
+    .joms-focus__cover-image--mobile {
+        @include media('medium') {
+            display: block;
+        }
+    }
+}
+
+.joms-focus__header {
+    display:block;
+    width:100%;
+    padding:ms();
+    background:rgba(0,0,0,0.4);
+    position:absolute;
+    bottom:0;
+}
+
+.joms-focus__title {
+    display:table-cell;
+
+    @if ($scss-direction == rtl) {
+        padding-right: ms();
+    } @else {
+        padding-left: ms();
+    }
+
+    vertical-align:middle;
+    h2, h3 {
+        color:white;
+        margin-top: 0;
+        margin-bottom:ms(-2);
+
+        @if ($scss-direction==rtl) {
+            text-align: right;
+        } @else {
+            text-align: left;
+        }
+
+
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    @include media('large') {
+        width:50%;
+        .joms-focus--mini & {
+            width: 50%;
+        }
+    }
+
+}
+
+
+.joms-focus__info {
+    list-style-type:none;
+    margin:0;
+    margin-bottom:ms();
+    color:$color-concrete;
+    font-size: $font-size-smallest;
+    line-height:ms();
+    padding:0 ms();
+    @extend %hidden-large;
+
+    span {
+        color:$scss-color-neutral-contrast;
+    }
+
+    a {
+        text-decoration:none;
+    }
+}
+
+.joms-focus__actions__wrapper {
+    display:none;
+
+    @if ($scss-direction==rtl) {
+        text-align: left;
+    } @else {
+        text-align: right;
+    }
+
+    @include media('large') {
+        display:table-cell;
+        vertical-align:middle;
+        width: 100%;
+    }
+}
+
+.joms-focus__info--desktop {
+    list-style-type:none;
+    color:white;
+    padding:0;
+    margin:0;
+    font-size:90%;
+    display:none;
+    li {
+        line-height:ms();
+    }
+
+    span {
+        font-weight:bold;
+    }
+
+    @include media('large') {
+        display:block;
+    }
+}
+
+.joms-focus__link {
+
+    list-style-type:none;
+    padding:0;
+    margin:0 ms();
+    margin-bottom:ms();
+    overflow:hidden;
+
+    @if $scss-color-focus-background != white {
+        .joms-icon {
+            fill: transparentize(color-contrast($scss-color-focus-background),0.4);
+        }
+        .joms-dropdown {
+            background: $scss-color-focus-background;
+            border: 0;
+            box-shadow: none;
+            > li:hover {
+                background: darken($scss-color-focus-background,4%);
+
+            }
+        }
+        color: color-contrast($scss-color-focus-background);
+    }
+
+    > li {
+        padding:ms(-1) ms();
+        cursor:pointer;
+
+        @if ($scss-direction==rtl) {
+            float: right;
+        } @else {
+            float: left;
+        }
+    }
+
+    @include media('small') {
+        li {
+            border-top: 1px solid rgba(0,0,0,0.06);
+            &:first-child {
+                border-top: 0;
+            }
+            &.half {
+                width: 50%;
+            }
+            &.full {
+                width: 100%;
+            }
+            &.hidden-mobile {
+                display: none;
+            }
+        }
+    }
+
+    @include media('medium') {
+        width:100%;
+        border:0;
+        border-top:1px solid rgba(0,0,0,0.06);
+        padding:0;
+        margin:0;
+        li {
+
+            @if ($scss-direction==rtl) {
+                border-left:1px solid rgba(0,0,0,0.06);
+            } @else {
+
+                border-right:1px solid rgba(0,0,0,0.06);
+            }
+
+            &.liked {
+                @if ($scss-direction==rtl) {
+                    float: left;
+                    border-right:1px solid rgba(0,0,0,0.06);
+                    border-left: 0;
+                } @else {
+                    float: right;
+                    border-left:1px solid rgba(0,0,0,0.06);
+                }
+            }
+            &.hidden-desktop {
+                display: none;
+            }
+        }
+
+    }
+
+
+
+}
+
+.joms-focus .joms-focus__link {
+  a {
+      font-size: $font-size-small;
+      font-weight: bold;
+      text-decoration:none;
+      &:hover {
+          text-decoration: none;
+          @if $scss-color-focus-background != white {
+              color: color-contrast($scss-color-focus-background) !important;
+          }
+      }
+      @if $scss-color-focus-background != white {
+          color: color-contrast($scss-color-focus-background) !important;
+          .joms-text--light {
+              color: transparentize(color-contrast($scss-color-focus-background),0.4) !important;
+          }
+      }
+
+  }
+}
+
+.joms-focus__actions {
+    display:table;
+    table-layout: fixed;
+    border-spacing:ms();
+    width:100%;
+    @extend %hidden-large;
+    a {
+        font-size:$font-size-small;
+        display:table-cell;
+        padding:ms(-2) ms(-1);
+        @include media('large') {
+            padding:ms(-2) ms();
+        }
+    }
+}
+
+.joms-focus__header__actions {
+    margin-bottom:ms(-1);
+
+    .joms-icon {
+        fill:white;
+    }
+    a {
+        color:white;
+        font-size: ms(-1);
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover, &:focus {
+            color:$color-cloud;
+        }
+    }
+
+    @include media('large') {
+        display:none;
+    }
+}
+
+.joms-focus__header__actions--desktop {
+    display:none;
+    @extend .joms-focus__header__actions;
+    @include media('large') {
+        display:block;
+        margin-top:ms(-2);
+        a {
+            font-size: $stream-font-size;
+            padding:ms(-2) ms(-1);
+        }
+        .joms-icon {
+            height: $stream-font-size;
+        }
+    }
+}
+
+
+.joms-focus__actions--desktop {
+    display:none;
+
+    @include media('large') {
+        display:block;
+        margin-top:ms();
+        a {
+            padding:ms(-2) ms(-1);
+        }
+    }
+
+
+
+}
+
+
+.joms-focus__button--message {
+    @extend %button--secondary;
+}
+
+.joms-focus__button--add {
+    @extend %button--primary;
+}
+
+.joms-focus__button--options {
+    @extend %button--neutral;
+    @extend %hidden-large;
+}
+
+.joms-focus__button--options--desktop {
+    display:none;
+    position:absolute;
+
+    top: 14px;
+
+    @if ($scss-direction == rtl) {
+        left: 14px;
+    } @else {
+        right: 14px;
+    }
+
+    > a {
+        background:rgba(0,0,0,0.2);
+        border-radius: 100%;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+
+        &.active {
+            background: rgba(0,0,0,0.6);
+        }
+    }
+
+    @include media('large') {
+        display:block;
+        > a {
+            text-align: center;
+            width:30px;
+            height:30px;
+            position: absolute;
+            @if ($scss-direction == rtl) {
+                left: 0;
+                right: auto;
+            } @else {
+                right: 0;
+                left: auto;
+            }
+        }
+        .joms-icon {
+            fill: $scss-color-neutral;
+            height:30px;
+        }
+    }
+}
+
+.joms-focus__date {
+    color: white;
+    width: 100px;
+    padding: 14px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    display: table-cell;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+    // rounded box
+    @extend %rounded;
+
+    &.cover,
+    &.module {
+        font-size:$font-size-small;
+        position: absolute;
+        bottom: ms();
+        left: ms();
+        padding: ms(-2);
+        background: rgba(0,0,0,0.6);
+        width: 50px;
+        span:last-child {
+            margin:0;
+        }
+    }
+
+    &.module {
+        background: transparent;
+        border:2px solid white;
+    }
+
+    @include media('large') {
+        padding: ms();
+    }
+
+    span {
+        display: block;
+        &:last-child {
+            margin-top: 25px;
+        }
+    }
+}
+
+.joms-focus__badges {
+
+    padding:ms(-1) 0 ms();
+    max-height:100px;
+
+    @include media('large') {
+        position: absolute;
+        top: 14px;
+
+        @if ($scss-direction == rtl) {
+            right: 14px;
+        } @else {
+            left: 14px;
+        }
+
+        z-index:10;
+        padding:0;
+
+    }
+    &.featured {
+        @if ($scss-direction == rtl) {
+            right: 70px;
+        } @else {
+            left: 70px;
+            }
+        }
+}
+
+.joms-module--hellome .joms-focus__badges {
+    @include media('large') {
+        position: absolute;
+        top: 14px;
+
+        @if ($scss-direction == rtl) {
+            left: 14px;
+            right: auto;
+        } @else {
+            right: 14px;
+            left: auto;
+        }
+
+        z-index:10;
+        padding:0;
+    }
+}

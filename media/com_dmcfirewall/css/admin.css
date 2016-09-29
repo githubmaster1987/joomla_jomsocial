@@ -1,0 +1,117 @@
+/**
+ *	@Package DMC Firewall
+ *	@Copyright Dean Marshall Consultancy Ltd
+ *	Email software@deanmarshall.co.uk
+ *	web: http://www.deanmarshall.co.uk/
+ *	web: http://www.webdevelopmentconsultancy.com/
+ */
+
+/* General Styling	*/
+.heading { font-size:18px; line-height:23px; margin:0 0 5px; display:block; }
+#dmc-cpanel-left { width:60%; float:left; padding:0 10px 10px 0; }
+#dmc-cpanel-right { float:right; padding:0px 0px 10px 10px; width:33%; }
+#footer { clear:both; border-top:1px solid rgb(238, 238, 238); }
+form { margin:0 !important; }
+#cpanel h2 { margin:0 0 10px; }
+#content h1, #content h2, #content h3, #content h4, #content h5, #content h6 { margin:0 0 12px !important; }
+#content h2 { font-size: 22px; line-height: 24px; }
+
+.span8 li { padding:7px 0 !important; }
+
+table.firewall-summary td { padding:4px; }
+table.firewall-summary { width:100%; margin-bottom:10px; }
+table.firewall-summary tr { border-bottom:1px dotted #dddddd; }
+table.firewall-summary tr:nth-child(2n+1) {	background:#fcfcfc; }
+
+.list-striped li, .list-striped dd, .row-striped .row, .row-striped .row-fluid { padding:6px 5px 6px 8px !important; }
+.row-striped .row-fluid { width:99% !important; }
+.akeeba-bootstrap .row-fluid [class*="span"] { min-height:auto !important; }
+.akeeba-bootstrap input[type="radio"], .akeeba-bootstrap input[type="checkbox"] { margin-top:-1px !important; }
+
+.textLeft { text-align:left !important; }
+/* Log view */
+#logPagination { margin: 20px auto 5px; text-align: center; }
+
+/*	Template Overrides	*/
+.alert { margin-bottom:10px !important; padding:8px 14px !important; }
+input[type="checkbox"] { margin-right:5px !important; }
+#cpanel h4, #footer h4 { margin:0 !important; }
+#cpanel .span8 { margin-left:0; }
+
+/*
+ * Database Prefix Changer
+ */
+.superadmin-form-actions,
+.healthcheck-form-actions,
+.standard-button-form-actions,
+.dbchanger-form-actions { border-top:medium none; margin:0; padding:10px 0; text-align:right; }
+
+/*
+ *
+ */
+.superadmin-form-actions {border-top:1px solid #ccc; }
+/*
+ * Changelog
+ */
+/**/
+h3.firewall-changelog { border-bottom: 2px solid #333; margin-top: 10pt; font-size: 13pt; }
+ul.firewall-changelog { list-style-type: none; padding: 7px; margin: 3px; font-size: 10pt; border: thin solid #ccc; background-color: #fefefe; border-radius: 5px; }
+ul.firewall-changelog li { line-height: 16px; padding: 0; margin: 0 3px 3px; }
+li.firewall-changelog-added { color: green; }
+li.firewall-changelog-removed { color: red; }
+li.firewall-changelog-changed { color: #666; }
+li.firewall-changelog-important { color: #cc8833; }
+li.firewall-changelog-fixed { color: blue; }
+ul.firewall-changelog span { display: inline-block; height: 16px; width: 32px; background: transparent url(../images/changelog.png) top left no-repeat; margin-right: 4px; }
+li.firewall-changelog-removed span { background-position: 0 -16px; }
+li.firewall-changelog-changed span { background-position: 0 -32px; }
+li.firewall-changelog-important span { background-position: 0 -64px; }
+li.firewall-changelog-fixed span { background-position: 0 -48px; }
+/**/
+
+#firewall-changelogtest ul { display:none !important; }
+
+/*
+ * Styles below relate to DMC Firewall 1.2 and greater. The below style have been added to
+ * aggregate multiple instances of the same rules
+ */
+
+.form-action-buttons { border-top:medium none; margin:0; padding:10px 0; text-align:right; }
+
+.content-go-right { text-align:right; }
+
+/*
+ * New icon set
+ * /
+.icon span.icon { font-size:36px; height:32px; margin:5px auto 10px; width:32px; }
+.fa { display:inline-block; font-family:FontAwesome; font-style:normal; font-weight:normal; line-height:1; }
+*/
+.icon {
+    border:1px solid #ccc;
+	border-radius:5px;
+	text-align:center;
+}
+.icon:hover {
+	background-color:#EEEEEE;
+}
+.icon a:hover, .icon a {
+	text-decoration:none;
+	color: #565656;
+	display: block;
+	padding: 10px;
+}
+.row-fluid [class*="span"] .icon {
+    margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+.icon .fa {
+	color:#565656;
+	font-size: 36px;
+}
+.row-fluid .icon.span2 {
+    min-height: 100px !important;
+	width: 145px;
+	float: left;
+}

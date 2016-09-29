@@ -1,0 +1,77 @@
+.joms-module--membersearch {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    margin-bottom: 0;
+    color: color-contrast($scss-color-membersearch);
+    box-shadow: none;
+
+    > ul {
+        @extend %joms-list;
+
+        > li > a {
+            display: block;
+
+            .joms-icon {
+                margin: 0;
+            }
+        }
+    }
+
+    @include media('large') {
+        padding: 2px;
+
+        > ul > li {
+            padding: 0;
+
+            > a {
+                padding: 10px 8.5px 13px;
+            }
+        }
+
+        @extend %clearfix;
+    }
+
+    .joms-popover {
+        padding: 0;
+
+        > li:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    form {
+        margin: 0;
+    }
+
+    .joms-avatar {
+        a {
+            padding: 0;
+        }
+
+        img {
+            max-width: 30px;
+            max-height: 30px;
+            padding: 2px;
+        }
+    }
+
+    .joms-dropdown {
+        left: 0;
+        right: 0;
+        width: auto;
+        min-width: 150px;
+
+        > li {
+            border-bottom: 1px solid rgba(0,0,0,.05);
+
+            &:last-child {
+                background-color: rgba(0,0,0,.01);
+                border-bottom: 0;
+                text-align: center;
+            }
+        }
+    }
+}

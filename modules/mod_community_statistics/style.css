@@ -1,0 +1,16 @@
+.joms-list--stats li {
+    display: table;
+    width: 100%;
+    padding: 6px 14px;
+    border-bottom:1px solid rgba(0,0,0,0.04);
+}
+
+.joms-list--stats li:last-child {
+    border-bottom:0;
+}
+
+.joms-list--stats li span {
+    display: table-cell;
+    width: 50px;
+    text-align: right;
+}

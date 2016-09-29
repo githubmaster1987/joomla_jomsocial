@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" type="plugin" group="installer" method="upgrade">
+	<name>PLG_INSTALLER_DMCFIREWALL_TITLE</name>
+	<author>Dean Marshall Consultancy Ltd</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>Copyright (C) 2013 - 2016 Dean Marshall Consultancy. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>software@deanmarshall.co.uk</authorEmail>
+	<authorUrl>www.webdevelopmentconsultancy.com</authorUrl>
+	<version>1.4.0</version>
+	<description>PLG_INSTALLER_DMCFIREWALL_DESC</description>
+	<files>
+		<filename plugin="dmcfirewall">dmcfirewall.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="lang">
+		<language tag="en-GB">en-GB/en-GB.plg_installer_dmcfirewall.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_installer_dmcfirewall.sys.ini</language>
+	</languages>
+</extension>

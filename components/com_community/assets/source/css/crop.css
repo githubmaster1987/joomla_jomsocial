@@ -1,0 +1,42 @@
+.joms-cropper {
+    display: inline-block;
+    margin-bottom: 10px;
+    vertical-align: top;
+    width: 100%;
+}
+
+.joms-cropper__wrapper {
+    border: 0;
+    margin: 0;
+    max-height: 300px;
+    max-width: 100%;
+    overflow: auto;
+    padding: 0;
+    position: relative;
+}
+
+.joms-cropper__box {
+    background-color: rgba(255, 255, 255, .4);
+    border: 2px solid rgba(0, 0, 0, .5);
+    border-radius: 2px;
+    cursor: move;
+    position: absolute;
+        top: 0;
+        left: 0;
+    width: 160px;
+        height: 160px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.joms-cropper__preview {
+    width: 64px;
+    height: 64px;
+    overflow: hidden;
+}
+
+.joms-cropper img {
+    max-height: none;
+    max-width: none;
+}

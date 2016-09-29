@@ -1,0 +1,610 @@
+.joms-postbox {
+    position:relative;
+    margin-bottom:ms();
+    background: $scss-color-postbox;
+    border: 1px solid rgba(0,0,0,0.12);
+    @extend %clearfix;
+
+    .joms-select {
+        width: auto;
+        max-width: 100%;
+    }
+}
+
+.joms-postbox-content {
+    @extend %clearfix;
+}
+
+.joms-postbox-preview {
+    border: 0;
+    border-bottom: 1px solid darken($scss-color-postbox,4%);
+    padding: ms(-1);
+}
+
+.inputbox {
+    background: transparent;
+    width: 100%;
+    height: auto;
+    .wrap {
+        position: relative;
+    }
+    .input {
+        display: inline-block;
+        max-width: 100%;
+        min-height: 1em;
+    }
+    .joms-textarea__wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    textarea.input {
+        background: none;
+        outline: none;
+        overflow: hidden;
+        position: relative;
+        top: 0;
+        left: 0;
+        resize: none;
+        width: 100%;
+        color: color-contrast($scss-color-postbox);
+
+        &::-webkit-input-placeholder {
+           color: color-contrast($scss-color-postbox);
+        }
+
+        &:-moz-placeholder { /* Firefox 18- */
+           color: color-contrast($scss-color-postbox);
+        }
+
+        &::-moz-placeholder {  /* Firefox 19+ */
+           color: color-contrast($scss-color-postbox);
+        }
+
+        &:-ms-input-placeholder {
+           color: color-contrast($scss-color-postbox);
+        }
+    }
+    >div >textarea.input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+    .joms-textarea__beautifier {
+        background: transparent;
+        padding: 0;
+        font-size: inherit;
+        line-height: inherit;
+        min-height: 0;
+    }
+    .joms-textarea__tag-ct {
+        left: -10px;
+        right: -10px;
+    }
+    span.input {
+        color: rgba(0,0,0,0);
+    }
+
+}
+
+.inputbox .input,.inputbox .attachment,.inputbox {
+    border: 0 none;
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
+.inputbox .attachment {
+    color: color-contrast($scss-color-postbox);
+}
+
+.joms-postbox-input {
+    min-height:56px;
+    width:100%;
+    padding:ms(-1);
+    position:relative;
+    word-wrap:break-word;
+    textarea {
+        box-shadow: none;
+        outline: none;
+        height: ms();
+        background:transparent;
+    }
+}
+
+.joms-postbox-input-text {
+    outline:none;
+    word-wrap:break-word;
+}
+
+.joms-postbox-charcount {
+    position:absolute;
+    top:0px;
+    @if ($scss-direction==rtl) {
+        left:0px;
+    } @else {
+        right:0px;
+    }
+    font-size:9px;
+    padding:0px 4px;
+    background: $scss-color-postbox-tab;
+    color: color-contrast($scss-color-postbox-tab);
+    line-height:16px;
+
+}
+
+.joms-postbox-tab {
+
+    font-size:$font-size-small;
+    background: $scss-color-postbox-tab;
+    .joms-icon {
+        height: 14px;
+        width: 14px;
+    }
+
+    [class^="joms-icon-"]:before,
+    [class*=" joms-icon-"]:before {
+        color: color-contrast($scss-color-postbox-tab);
+    }
+
+    li {
+        padding: 0;
+        cursor: pointer;
+        display: inline-block !important;
+        &:hover {
+            background: darken($scss-color-postbox-tab,4%);
+        }
+
+        &.hidden {
+            display: none !important;
+        }
+
+        &.invisible {
+            visibility: hidden;
+        }
+
+        a {
+            padding: ms(-2) ms(-1);
+            display: block;
+        }
+    }
+
+    .joms-postbox & {
+        li {
+            padding: ms(-2) ms(-1);
+        }
+    }
+
+    > div {
+        padding: ms(-1);
+        display:inline-block;
+        cursor:pointer;
+        text-align:center;
+        position: relative;
+        vertical-align: middle;
+        &.active {
+            font-weight: bold;
+        }
+    }
+    span {
+        display:none;
+        color: color-contrast($scss-color-postbox-tab);
+        @include media('medium') {
+            display: inline-block;
+        }
+    }
+
+    .joms-postbox-action {
+        position:absolute;
+        bottom: 2px;
+        padding: 0;
+
+        &.event-action {
+            right:14px;
+            bottom:10px;
+        }
+
+        @if ($scss-direction==rtl) {
+            left:3px;
+        } @else {
+            right:3px;
+        }
+    }
+
+    .joms-postbox-cancel {
+            @extend %button--neutral;
+            padding: ms(-4) ms(-1);
+    }
+
+    .joms-postbox-save,
+    .joms-postbox-done {
+            @extend %button--primary;
+            padding: ms(-4) ms(-1);
+    }
+
+
+}
+
+.joms-postbox-content {
+    background: $scss-color-postbox;
+}
+
+.joms-postbox-dropdown {
+    width:96%;
+    position:absolute;
+    top:100%;
+    left:2%;
+    padding:8px;
+    z-index:10;
+    color: color-contrast($scss-color-postbox);
+    background: $scss-color-postbox;
+    border: 1px solid $scss-color-dropdown-border;
+    border-top: 0;
+    @extend %box-shadow;
+
+    &.mood-dropdown {
+        max-height: 140px;
+        overflow-y: scroll;
+    }
+
+    li {
+        cursor:pointer;
+        padding:4px 8px;
+        line-height:18px;
+        &:hover {
+            background: darken($scss-color-postbox,4%);
+        }
+    }
+    p {
+        font-size:13px;
+        font-weight:bold;
+        i:before {
+            font-size:$font-size-small;
+            margin:0px;
+            margin-right:4px;
+        }
+    }
+    span {
+        font-size:$font-size-small;
+    }
+
+    .joms-postbox-keyword {
+        width:100%;
+        position:relative;
+        border:1px solid rgba(0,0,0,0.1);
+        margin:6px 0px;
+    }
+
+
+    input {
+
+    }
+
+    .event-time-column {
+        width:50%;
+        float:left;
+        padding:6px;
+    }
+
+    .event-all-day {
+        margin-left:6px;
+        cursor:pointer;
+        position:relative;
+        i {
+            font-size:14px;
+            &:before {
+                position:absolute;
+                top:0px;
+            }
+        }
+    }
+}
+
+.joms-activity-filter__options {
+    position: absolute;
+    top: 4px;
+    @if ($scss-direction==rtl) {
+        left: 6px;
+    } @else {
+        right: 6px;
+    }
+}
+
+.joms-postbox-emoticon {
+    display:block;
+    li {
+        width:100%;
+        display:block;
+        float:left;
+        padding:4px;
+        cursor:pointer;
+        div {
+            padding:2px 4px;
+        }
+        span {
+            margin-left:4px;
+        }
+    }
+
+    @include media('medium') {
+        li {
+            width:50%;
+        }
+    }
+
+    .joms-remove-button {
+        cursor:pointer;
+        width:100%;
+        margin-top:6px;
+        text-align:center;
+        border:1px solid #dedede;
+        background:#fafafa;
+        &:hover {
+            background:#fff;
+        }
+    }
+}
+
+.joms-postbox-locations {
+    max-height:140px;
+    overflow-y:auto;
+}
+
+.joms-location-action {
+    position:absolute;
+    top:16px;
+    right:16px;
+}
+
+.joms-postbox__preview{
+    background: $scss-color-postbox;
+    border:none;
+    padding:ms();
+}
+
+.joms-postbox-photo-preview {
+
+    .joms-postbox-photo-item {
+        float:left;
+        display:block;
+        width:33.3%;
+        padding:8px;
+        position:relative;
+        .img-wrapper {
+            padding:4px;
+            display:block;
+            img {
+                visibility:hidden;
+                max-width:100%;
+            }
+        }
+        @include media('medium') {
+            width: 20%;
+        }
+    }
+
+    .joms-postbox-photo-action {
+        text-align: center;
+        background: $scss-color-neutral;
+        position: absolute;
+        top:13px;
+        right:11px;
+        padding:0 4px;
+        span {
+            color:color-contrast($scss-color-neutral);
+            cursor:pointer;
+            font-size:18px;
+            font-weight:bold;
+            line-height:0;
+        }
+    }
+}
+
+.joms-postbox-gif-preview {
+
+    .joms-postbox-photo-item {
+        width: 100%;
+
+        .img-wrapper {
+            text-align: center;
+
+            img {
+                width: auto;
+                max-width: 100%;
+                max-height: 250px;
+                margin: 0 auto;
+                box-shadow: 0 0 2px 1px rgba(255,255,255,1);
+            }
+        }
+    }
+}
+
+.joms-postbox-photo-progressbar {
+    position:absolute;
+    bottom:14px;
+    left:14px;
+    right:14px;
+    height:6px;
+    .joms-postbox-photo-progress {
+        background:$scss-color-primary;
+        height:6px;
+        width:0px;
+    }
+}
+
+.joms-postbox-select-album,
+.joms-fetched-category {
+    min-height: 28px;
+    margin: 8px;
+    padding: 0 !important;
+    background-color: rgba(0,0,0,.05);
+
+    span {
+        min-height: 26px;
+    }
+
+    svg {
+        top: 7px;
+    }
+}
+
+.joms-fetched-category {
+    margin: 0;
+}
+
+.joms-postbox-inner-panel {
+    background: $scss-color-postbox;
+    padding:ms(-1);
+    border-bottom: 1px solid darken($scss-color-postbox,4%);
+    .default-text {
+        color:color-contrast($scss-color-postbox);
+    }
+    color: color-contrast($scss-color-postbox);
+}
+
+.joms-postbox-photo-upload {
+    cursor:pointer;
+    text-align:center;
+    font-size:$font-size-small;
+    height:40px;
+    line-height:40px;
+    font-weight:bold;
+    text-transform: uppercase;
+    &:hover {
+        background: darken($scss-color-postbox,4%);
+    }
+
+    @include media('xsmall') {
+        line-height: 20px;
+    }
+}
+
+.joms-postbox-double-panel {
+    li {
+        width:50%;
+        float:left;
+        font-size:$font-size-small;
+        text-align:center;
+        cursor:pointer;
+        line-height:40px;
+        height:40px;
+        font-weight:bold;
+        text-transform:uppercase;
+        white-space:nowrap;
+
+        &.joms-postbox-video-upload {
+            line-height:30px;
+            span {
+                font-size:$font-size-smallest;
+                font-weight:normal;
+                line-height:0px;
+                display:block;
+            }
+        }
+
+        &:hover {
+            background: darken($scss-color-postbox,4%);
+        }
+
+        @include media('xsmall') {
+            &:nth-child(1n+0) {
+                width: 45%;
+            }
+            &:nth-child(odd) {
+                width: 55%;
+            }
+        }
+    }
+}
+
+.joms-postbox-video-state-upload {
+    input.input {
+        outline: none;
+        width: 100%;
+    }
+}
+
+.joms-postbox-event-title {
+    padding-bottom:8px;
+}
+
+.joms-postbox-event-description {
+    padding-top:8px;
+}
+
+.joms-input-field-name {
+    font-weight:bold;
+}
+
+.joms-fetched-close {
+    cursor:pointer;
+    position:absolute;
+    top:12px;
+    left:0px;
+    padding:1px 4px;
+    border:1px solid #dadada;
+    background:#fafafa;
+    font-size:11px;
+}
+
+.joms-fetched-wrapper  {
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px dashed #dadada;
+    position:relative;
+}
+
+.joms-fetched-images {
+    width:100%;
+    max-width: 100%;
+    margin-bottom:ms(-1);
+    @include media('medium') {
+        float:left;
+        max-width:120px;
+        margin-bottom:0;
+    }
+}
+
+.joms-fetched-field {
+    margin-left:0;
+    input, textarea {
+        display:none;
+        width:100%;
+        font-size:95%;
+    }
+    textarea {
+        resize:none;
+        min-height:70px;
+    }
+    &.joms-fetched-description {
+        height:70px;
+        overflow:hidden;
+    }
+    @include media('medium') {
+        margin-left:130px;
+    }
+}
+
+.joms-postbox-custom {
+    textarea {
+        width:100%;
+        resize:none;
+    }
+}
+
+.joms-postbox-loading {
+    position: absolute !important;
+    background: $scss-color-postbox-tab;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    display: block;
+    height: 32px;
+}

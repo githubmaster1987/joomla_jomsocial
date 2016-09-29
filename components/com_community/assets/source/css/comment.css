@@ -1,0 +1,34 @@
+.joms-comment__item .joms-comment__reply {
+    background-color: transparent !important;
+    display: none;
+}
+
+.joms-comment__attachment {
+    padding: 5px 0;
+}
+
+/** Comments inside popup. */
+.joms-popup .joms-comment {
+    display: block !important;
+}
+
+.joms-popup .joms-comment__header,
+.joms-popup .joms-comment__body,
+.joms-popup .joms-comment__reply,
+.joms-popup .joms-comment__actions {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/** Responsive. */
+@media all and ( max-width: 480px ) {
+    .joms-comment.joms-comment--inbox,
+    .joms-comment.joms-comment--wall {
+        display: block !important;
+    }
+
+    .joms-comment__actions.joms-comment__actions--single {
+        padding: 7px 14px;
+    }
+}

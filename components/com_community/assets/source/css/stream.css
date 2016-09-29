@@ -1,0 +1,111 @@
+.joms-stream {
+    margin-bottom: 14px !important;
+    padding: 0 !important;
+}
+
+.joms-media--images img {
+    display: none;
+    border: 0 solid transparent;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    margin: 0 -1px;
+}
+
+.joms-media--images img.montage {
+    display: inline;
+}
+
+.joms-input__wrapper,
+.joms-textarea__wrapper {
+    position: relative;
+}
+
+.joms-textarea__loading {
+    display: none;
+    position: absolute;
+        top: 0;
+        left: 0;
+    text-align: right;
+    width: 100%;
+        height: 100%;
+}
+
+.joms-textarea__loading img {
+    margin: 12px 35px 0 0;
+}
+
+.joms-textarea__attachment {
+    border-radius: 0 0 3px 3px !important;
+    border-top-width: 0px !important;
+    display: none;
+    height: auto !important;
+    position: relative;
+    margin-top: 0px;
+    min-height: 0 !important;
+}
+
+.joms-textarea__attachment button {
+    background: #FFF;
+    border: 0 none;
+    color: #333;
+    display: none;
+    font-size: 18px;
+    line-height: 24px;
+    position: absolute;
+        top: 0;
+        right: 0;
+    width: 24px;
+        height: 24px;
+}
+
+.joms-textarea__attachment--thumbnail {
+    display: none;
+}
+
+.joms-textarea__attachment--loading {
+    display: none;
+    text-align: center;
+}
+
+.joms-autocomplete {
+    background-color: #fff;
+    border: 1px solid #e3e5e7;
+    border-radius: 0 0 3px 3px;
+    color: #000;
+    background-color: #fff;
+    color: #000;
+    margin-top: -2px;
+    padding: 5px 0;
+    position: absolute;
+        left: 0;
+        right: 0;
+    z-index: 1;
+}
+
+.joms-autocomplete.focus {
+    border-color: rgba(82, 168, 236, 0.8);
+}
+
+.joms-autocomplete a {
+    color: inherit;
+    display: block;
+    padding: 6px 8px;
+    white-space: nowrap;
+}
+
+.joms-autocomplete a:hover {
+    background-color: #0081c2;
+    color: #fff;
+    text-decoration: none;
+}
+
+.joms-tagging {
+    border: 1px solid transparent;
+    opacity: .3;
+    padding: 8px;
+    position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+}

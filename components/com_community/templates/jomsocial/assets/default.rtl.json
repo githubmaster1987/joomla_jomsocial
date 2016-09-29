@@ -1,0 +1,17 @@
+{
+    "core": {
+        "css": [
+            "default"
+        ],
+        "js": [
+        ]
+    },
+    "views": {
+        "frontpage": {
+            "css": [
+                "",
+                ""
+            ]
+        }
+    }
+}

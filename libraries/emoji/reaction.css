@@ -1,0 +1,181 @@
+html {
+  background: #f1f1f1;
+  -webkit-box-sizing: border-box -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.actionBox {
+  position: relative;
+  background: #fff;
+}
+
+.actionBox span {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 14px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+i {
+  content: '';
+  display: inline-block;
+  height: 14px;
+  margin: 0 6px -3px 0;
+  width: 14px;
+}
+
+.like {
+  background-image: url(https://i.imgsafe.org/0616248.png);
+  background-repeat: no-repeat;
+  background-size: 500px 488px;
+  background-position: -277px -446px
+}
+
+.comment {
+  background-image: url(https://i.imgsafe.org/0616248.png);
+  background-repeat: no-repeat;
+  background-size: 500px 488px;
+  background-position: -262px -446px
+}
+
+.share {
+  background-image: url(https://i.imgsafe.org/0616248.png);
+  background-repeat: no-repeat;
+  background-size: 500px 488px;
+  background-position: -322px -446px;
+}
+
+.actionBox span {
+  cursor: pointer;
+}
+
+.clipDiv {
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+}
+
+.emoji-reactions {
+  left: -14px;
+  position: absolute;
+  top: -50px;
+  z-index: 200;
+  background: #fff;
+  display: inline-block;
+  font-size: 0;
+  padding: 2px 10px;
+  text-align: left;
+  border-radius: 70px;
+  white-space: nowrap;
+  height: 49px;
+  box-shadow: 0 8px 2px -6px rgba(0, 0, 0, 0.29);
+  display: none;
+}
+
+.emoji-reactions span {
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-backface-visibility: hidden;
+  cursor: pointer;
+  display: inline-block;
+  height: 48px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transform: scale(1, 1) translateY(.0001px);
+  transform-origin: 50% 100%;
+  width: 48px;
+}
+
+.emoji-reactions span .reaction {
+  transform: scale(.8, .8) translate(0, 0);
+  transition: transform 200ms ease;
+}
+
+.reaction .react {
+  display: block;
+  height: 48px;
+  image-rendering: crisp-edges;
+  line-height: 1;
+  width: 48px;
+  background-image: url(https://i.imgsafe.org/c505d7a.png);
+  background-size: 48px 384px;
+}
+
+.react.like {
+  background-position: 0 -144px;
+}
+
+.react.love {
+  background-position: 0 -192px;
+}
+
+.react.haha {
+  background-position: 0 -96px;
+}
+
+.react.wow {
+  background-position: 0 -288px;
+}
+
+.react.sorry {
+  background-position: 0 -240px;
+}
+
+.react.anger {
+  background-position: 0 0;
+}
+
+.react.dislike {
+  background-position: 0 -144px;
+  transform: rotate(180deg);
+}
+
+.emoji-reactions span .text {
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: -28px;
+  transform: translateX(-50%);
+}
+
+.emoji-reactions span .text div {
+  background-color: rgba(0, 0, 0, .75);
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  max-width: 100%;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 8px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition: opacity 50ms ease;
+}
+
+.emoji-reactions span:hover .reaction {
+  transform: scale(1, 1) translate(0, -6px);
+}
+
+.emoji-reactions span:hover .text div {
+  opacity: 1;
+}
+
+.instructions {
+  font-size: 14px;
+  position: relative;
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 0px 15px;
+  top: -9px;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="community">
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<params>
+		<param name="path" type="text" default="" size="45" label="PLG_MYRSSFEEDS_URL" description="PLG_MYRSSFEEDS_URL_DESC" />
+		<param name="count" type="text" default="10" size="3" label="PLG_MYRSSFEEDS_COUNT" description="PLG_MYRSSFEEDS_COUNT_DESC" />
+	</params>
+</extension>

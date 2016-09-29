@@ -1,0 +1,74 @@
+.joms-legacy-dropdown {
+    position: relative;
+}
+
+.joms-legacy-dropdown__button {}
+
+.joms-legacy-dropdown__menu {
+    /* delete these lines to replace with default font */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    /* -- */
+
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: none;
+    margin: 2px 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+        top: 100%;
+        right: auto;
+        bottom: auto;
+        left: 0;
+    text-align: left;
+    z-index: 1;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.joms-legacy-dropdown__menu--up {
+    top: auto;
+    bottom: 100%;
+}
+
+.joms-legacy-dropdown__menu--right {
+    right: 0;
+    left: auto;
+}
+
+.joms-legacy-dropdown__menuitem,
+.joms-legacy-dropdown__menu li {
+    display: block;
+    white-space: nowrap;
+    line-height: 20px;
+}
+
+.joms-legacy-dropdown__menuitem a,
+.joms-legacy-dropdown__menu li a {
+    color: inherit;
+    display: block;
+    font-weight: normal;
+    padding: 3px 20px;
+    text-decoration: none;
+}
+
+.joms-legacy-dropdown__menuitem a:hover,
+.joms-legacy-dropdown__menu li a:hover {
+    background-color: #0081C2;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.joms-legacy-dropdown__menuitem--divider,
+.joms-legacy-dropdown__menu li.divider {
+    background-color: #E5E5E5;
+    height: 1px;
+    margin: 9px 1px;
+}
+
+.joms-legacy-dropdown--opened .joms-legacy-dropdown__menu {
+    display: block;
+}
