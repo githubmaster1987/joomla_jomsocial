@@ -61,7 +61,7 @@ $(document).ready(function() {
 
 </script>
 
-
+<!--
 <?php if ($allowComment || $allowLike || $showLike) { ?>
 <div class="joms-stream__status--mobile">
 
@@ -127,7 +127,7 @@ $(document).ready(function() {
 
 </div>
 <?php } ?>
-
+-->
 <div class="joms-stream__actions">
 
     <!-- liked -->

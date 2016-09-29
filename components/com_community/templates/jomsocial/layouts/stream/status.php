@@ -257,38 +257,38 @@ $title = $activity->get('title');
           </ul>
     </span>
     <div class="like-stat" style="display:"> <!-- Like statistic container-->
-        <span class="like-emo"> <!-- like emotions container -->
-            <!-- given emotions like, wow, sad (default:Like) -->
-            <span class="like-btn-default"></span>
-        </span>
-        <span class="like-details">1000</span>
-
         <span class="love-emo"> <!-- like emotions container -->
             <!-- given emotions like, wow, sad (default:Like) -->
             <span class="love-btn-default"></span>
         </span>
-        <span class="love-details">2000</span>
+        <span class="love-details"></span>
+        
+        <span class="like-emo"> <!-- like emotions container -->
+            <!-- given emotions like, wow, sad (default:Like) -->
+            <span class="like-btn-default"></span>
+        </span>
+        <span class="like-details"></span>
 
         <span class="haha-emo"> <!-- like emotions container -->
             <!-- given emotions like, wow, sad (default:Like) -->
             <span class="haha-btn-default"></span>
         </span>
-        <span class="haha-details">3000</span>
+        <span class="haha-details"></span>
         <span class="wow-emo"> <!-- like emotions container -->
             <!-- given emotions like, wow, sad (default:Like) -->
             <span class="wow-btn-default"></span>
         </span>
-        <span class="wow-details">4000</span>
+        <span class="wow-details"></span>
         <span class="sad-emo"> <!-- like emotions container -->
             <!-- given emotions like, wow, sad (default:Like) -->
             <span class="sad-btn-default"></span>
         </span>
-        <span class="sad-details">5000</span>
+        <span class="sad-details"></span>
         <span class="angry-emo"> <!-- like emotions container -->
             <!-- given emotions like, wow, sad (default:Like) -->
             <span class="angry-btn-default"></span>
         </span>
-        <span class="angry-details">6000</span>
+        <span class="angry-details"></span>
     </div>
 </div>
 
